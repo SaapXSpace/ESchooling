@@ -1,0 +1,594 @@
+@page
+@{
+    ViewData["Title"] = "ADMIN PANEL";
+    Layout = "_Layout";
+}
+
+<style>
+    .topCard{
+        border-bottom: 5px solid #40679E;   
+        color : #ffff;
+        @* background: rgb(238,174,202); *@
+        font-weight: bold;
+        @* background: #B2C8BA; *@
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adding shadow effect */
+        transition: box-shadow 0.3s ease; /* Adding transition for smooth effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adding shadow effect */
+        
+        @* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); *@
+        
+    }
+
+    .topCard, .card-title{
+        font-weight: bold;
+        
+    }
+</style>
+
+<div class="container-fluid" >
+    <div class="header">
+        <h1 class="header-title" id="name">
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl">
+            <div class="card topCard" >
+                <div class="card-body" id="card_total_users" >
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">TOTAL USERS</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_total_user">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_active_users">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">ACTIVE USERS</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="user-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_active_user">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_total_student" >
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">TOTAL STUDENT</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_total_student">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4  col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_active_student">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">ACTIVE STUDENT</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle" style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="user-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_active_student">0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_total_course" >
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">TOTAL COURSES</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="book"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_total_course">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_total_certificate" >
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">CERTIFICATES</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="award"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_total_certificate">0</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4  col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_income">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">TODAY INCOME</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="plus-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_income">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4  col-lg-3 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_expence">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">TODAY EXPENCE</h5>
+                        </div>
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle" style="background-color: #005e89;color:white">
+                                    <i class="align-middle" data-feather="minus-square"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3" id="txt_expence">0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="pt-3 pb-3">LAST 4 DAY CERTIFICATES STATUS</h3>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl">
+            <div class="card topCard">
+                <div class="card-body" id="card_total_course" >
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col mt-0">
+                                    <h5 class="card-title"> CERTIFICATES <span id="forth_day_date" >  </span></h5>
+                                </div>
+                                <div class="col">
+                                    <div class="avatar">
+                                        <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                            <i class="align-middle" data-feather="award"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="display-5 mt-1 mb-3" id="forth_day_count">0</h1>
+                        </div>
+                         <div class="col">
+                            <div class="row">
+                                <div class="col mt-0">
+                                    <h5 class="card-title"> CERTIFICATES <span id="third_day_date" > </span></h5>
+                                </div>
+                                <div class="col">
+                                    <div class="avatar">
+                                        <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                            <i class="align-middle" data-feather="award"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="display-5 mt-1 mb-3" id="third_day_count">0</h1>
+                        </div>
+                         <div class="col">
+                            <div class="row">
+                                <div class="col mt-0">
+                                    <h5 class="card-title"> CERTIFICATES <span id="second_day_date" > </span></h5>
+                                </div>
+                                <div class="col">
+                                    <div class="avatar">
+                                        <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                            <i class="align-middle" data-feather="award"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="display-5 mt-1 mb-3" id="second_day_count">0</h1>
+                        </div>
+                         <div class="col">
+                            <div class="row">
+                                <div class="col mt-0">
+                                    <h5 class="card-title"> CERTIFICATES <span id="current_day_date" >  </span></h5>
+                                </div>
+                                <div class="col">
+                                    <div class="avatar">
+                                        <div class="avatar-title rounded-circle " style="background-color: #005e89;color:white">
+                                            <i class="text-right" data-feather="award"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="display-5 mt-1 mb-3" id="current_day_count">0</h1>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 col-lg-8"  >
+                            <h4 class="card-title"> <i class="align-middle mr-2 fas fa-fw fa-money-bill-wave-alt"></i> MONTHLY FINANCIAL SUMMARY </h4>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 did-floating-label-content "  >
+                            <input class="did-floating-input" id="txt_monthlyAccoutSummaryMonth" type="month">
+                            <label class="did-floating-label"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div id="apexcharts-column"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 ">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12"  >
+                            <h4 class="card-title"> <i class="align-middle mr-2 fas fa-fw fa-user-plus"></i> COURSE SUMMARY </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-5">
+                    <div class="chart">
+                        <canvas id="apexcharts-department"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 ">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 col-lg-8"  >
+                            <h4 class="card-title"> <i class="align-middle mr-2 fas fa-fw fa-money-bill-wave-alt"></i> YEARLY CERTIFICATES SUMMARY </h4>
+                        </div>
+                       <div class="col-sm-4 col-md-4 col-lg-4 did-floating-label-content "  >
+                            <input class="did-floating-input" id="txt_YearlyCertificatesSummaryYear" type="month">
+                            <label class="did-floating-label"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <div id="apexcharts-certificates"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* <div class="card">
+        <div class="card-header">
+            <div class="row pt-3" >
+                <div class="col-lg-4" style="justify-content: start;">
+                    <h2 class="p-1" style="color: #3e4676;">Login Information</h2>
+                </div>
+                <div class="col-lg-8" style="justify-content: end;">
+                    <div class="row">
+                        <div class="col-lg-5 did-floating-label-content "  >
+                            <input class="did-floating-input" id="txt_from" type="date">
+                            <label class="did-floating-label">Date From</label>
+                        </div>
+                        <div class="col-lg-5 did-floating-label-content "  >
+                            <input class="did-floating-input" id="txt_from" type="date">
+                            <label class="did-floating-label">Date To</label>
+                        </div>
+                        <div class="col-lg-1 did-floating-label-content "  >
+                            <button type="button" id="btn_filterloginInfo" class="btn btn-primary align-middle pl-3 pr-3 pt-2 pb-2" style="background-color: #2c497d;color:white"><i class="align-middle fas fa-fw fa-sync-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    <div class="row">
+        <div class="col-12 col-md-12 col-xxl-4 d-flex">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <div class="card-actions float-right">
+                        <a href="#" class="mr-1">
+                            <i class="align-middle" data-feather="refresh-cw"></i>
+                        </a>
+                        <div class="d-inline-block dropdown show">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <i class="align-middle" data-feather="more-vertical"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="card-title mb-0">Languages</h5>
+                </div>
+                <table class="table table-striped my-0">
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th class="text-right">Users</th>
+                            <th class="d-none d-xl-table-cell w-75">% Users</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>en-us</td>
+                            <td class="text-right">735</td>
+                            <td class="d-none d-xl-table-cell">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary-dark" role="progressbar" style="width: 43%;" aria-valuenow="43"
+                                        aria-valuemin="0" aria-valuemax="100">43%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>en-gb</td>
+                            <td class="text-right">223</td>
+                            <td class="d-none d-xl-table-cell">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary-dark" role="progressbar" style="width: 27%;" aria-valuenow="27"
+                                        aria-valuemin="0" aria-valuemax="100">27%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>fr-fr</td>
+                            <td class="text-right"> </td>
+                            <td class="d-none d-xl-table-cell">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary-dark" role="progressbar" style="width: 22%;" aria-valuenow="22"
+                                        aria-valuemin="0" aria-valuemax="100">22%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>es-es</td>
+                            <td class="text-right">132</td>
+                            <td class="d-none d-xl-table-cell">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary-dark" role="progressbar" style="width: 16%;" aria-valuenow="16"
+                                        aria-valuemin="0" aria-valuemax="100">16%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>de-de</td>
+                            <td class="text-right">118</td>
+                            <td class="d-none d-xl-table-cell">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary-dark" role="progressbar" style="width: 15%;" aria-valuenow="15"
+                                        aria-valuemin="0" aria-valuemax="100">15%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ru-ru</td>
+                            <td class="text-right">98</td>
+                            <td class="d-none d-xl-table-cell">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary-dark" role="progressbar" style="width: 13%;" aria-valuenow="13"
+                                        aria-valuemin="0" aria-valuemax="100">13%</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7 col-xl-8 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header">
+                    <div class="card-actions float-right">
+                        <a href="#" class="mr-1">
+                            <i class="align-middle" data-feather="refresh-cw"></i>
+                        </a>
+                        <div class="d-inline-block dropdown show">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <i class="align-middle" data-feather="more-vertical"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="card-title mb-0">Traffic</h5>
+                </div>
+                <table id="datatables-dashboard-traffic" class="table table-striped my-0">
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th class="text-right">Users</th>
+                            <th class="d-none d-xl-table-cell text-right">Sessions</th>
+                            <th class="d-none d-xl-table-cell text-right">Bounce Rate</th>
+                            <th class="d-none d-xl-table-cell text-right">Avg. Session Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google</td>
+                            <td class="text-right">1023</td>
+                            <td class="d-none d-xl-table-cell text-right">1265</td>
+                            <td class="d-none d-xl-table-cell text-right text-success">27.23%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:06:25</td>
+                        </tr>
+                        <tr>
+                            <td>Bing</td>
+                            <td class="text-right">504</td>
+                            <td class="d-none d-xl-table-cell text-right">623</td>
+                            <td class="d-none d-xl-table-cell text-right text-danger">66.76%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:04:42</td>
+                        </tr>
+                        <tr>
+                            <td>Twitter</td>
+                            <td class="text-right">462</td>
+                            <td class="d-none d-xl-table-cell text-right">571</td>
+                            <td class="d-none d-xl-table-cell text-right text-success">31.53%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:08:05</td>
+                        </tr>
+                        <tr>
+                            <td>Pinterest</td>
+                            <td class="text-right">623</td>
+                            <td class="d-none d-xl-table-cell text-right">770</td>
+                            <td class="d-none d-xl-table-cell text-right text-danger">52.81%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:03:10</td>
+                        </tr>
+                        <tr>
+                            <td>DuckDuckGo</td>
+                            <td class="text-right">693</td>
+                            <td class="d-none d-xl-table-cell text-right">856</td>
+                            <td class="d-none d-xl-table-cell text-right text-success">37.36%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:09:12</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub</td>
+                            <td class="text-right">713</td>
+                            <td class="d-none d-xl-table-cell text-right">881</td>
+                            <td class="d-none d-xl-table-cell text-right text-success">38.09%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:06:19</td>
+                        </tr>
+                        <tr>
+                            <td>Direct</td>
+                            <td class="text-right">872</td>
+                            <td class="d-none d-xl-table-cell text-right">1077</td>
+                            <td class="d-none d-xl-table-cell text-right text-success">32.70%</td>
+                            <td class="d-none d-xl-table-cell text-right">00:09:18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> *@
+
+    @* <div class="row">
+        <div class="col-12 col-lg-5 col-xl-4 d-flex">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <div class="card-actions float-right">
+                        <a href="#" class="mr-1">
+                            <i class="align-middle" data-feather="refresh-cw"></i>
+                        </a>
+                        <div class="d-inline-block dropdown show">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <i class="align-middle" data-feather="more-vertical"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="card-title mb-0">Browser Usage</h5>
+                </div>
+                <div class="card-body d-flex">
+                    <div class="align-self-center w-100">
+                        <div class="py-3">
+                            <div class="chart chart-xs">
+                                <canvas id="chartjs-dashboard-pie"></canvas>
+                            </div>
+                        </div>
+
+                        <table class="table mb-0">
+                            <tbody>
+                                <tr>
+                                    <td><i class="fas fa-circle text-primary fa-fw"></i> Chrome</td>
+                                    <td class="text-right">4401</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-circle text-warning fa-fw"></i> Firefox</td>
+                                    <td class="text-right">4003</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-circle text-danger fa-fw"></i> IE</td>
+                                    <td class="text-right">1589</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> *@
+</div>
+@section Scripts
+{
+  <script src="@Url.Content("~/AppJS/Dashboard/Dashboards/AdminDashboard.js")" type="module"></script>
+
+}

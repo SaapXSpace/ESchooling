@@ -1,0 +1,117 @@
+﻿@page
+@{
+    ViewData["Title"] = "REGISTRATION";
+    Layout = "_LoginLayout";
+}
+<style>
+#parentContainer {
+  position: relative;
+}
+#childContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+<main class="main h-100 w-100" id="parentContainer">
+    <div class="container h-100 " >
+        <div class="row h-100">
+            <div class="col-sm-10 col-md-6 col-lg-5 mx-auto d-table h-100 " id="childContainer" >
+                <div class="d-table-cell align-middle">
+
+                   
+
+                    <div class="card" style="border-Top: 15px solid #80cc96;border-Bottom: 15px solid #80cc96;">
+                        <div class="card-body">
+                            <div class="m-sm-12">
+                                <div class="text-center mb-4">
+                                    <h1 class="h2 text-light"><img src="~/img/brands/logo.png" alt="" width="300px" ></h1>            
+                                </div>
+                                <form id="create_form">
+                                    <fieldset id="SubmitForm">
+                                        <div class="row form-group m-2">
+                                            <div class="col-lg-6 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_code" type="text">
+                                                <label class="did-floating-label">First Name</label>
+                                            </div>
+                                            <div class="col-lg-6 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_code" type="text">
+                                                <label class="did-floating-label">Last Name</label>
+                                            </div>
+                                            <div class="col-lg-12 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_code" type="text">
+                                                <label class="did-floating-label">Email</label>
+                                            </div>
+                                            <div class="col-lg-12 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_code" type="text">
+                                                <label class="did-floating-label">Contact</label>
+                                            </div>
+                                            <div class="col-lg-6 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_code" type="password">
+                                                <label class="did-floating-label">Password</label>
+                                            </div>
+                                            <div class="col-lg-6 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_code" type="password">
+                                                <label class="did-floating-label">Confirm Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-2">
+                                            <div class="col-lg-12" style="text-align:left;">
+                                                <label class="custom-control custom-checkbox m-0">
+                                                    <input type="checkbox" id="ck_TermAndCondition" class="custom-control-input">
+                                                    <span class="custom-control-label">read our term and condition</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-2">
+                                            <div class="col-lg-12">
+                                                <button type="button" class="btn btn-lg col-lg-12 text-light" id="btn_register" style="background-color:#454662;">Register</button>
+                                                <p class="text-right"> have an account? <a href="/Auth/SignIn" > sign in  </a></p>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modal: MAP-->
+<div class="modal fade" id="modalMap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+        <div>
+            <input type="text" id="location_input" class="form-control p-3" placeholder="search here" />
+            <ul id="locationsList">
+
+            </ul>
+            <div id="map" style="position: sticky;">
+
+            </div>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <button type="button" id="save_location" class="btn btn-info btn-md">Save location <i class="fas fa-map-marker-alt ml-1"></i></button>
+        <button type="button" id="current_location" class="btn btn-info btn-md"> <i class="fas fa-street-view"></i></button>
+        <button type="button" class="btn btn-outline-info btn-md" data-dismiss="modal">Close <i class="fas fa-times ml-1"></i></button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: MAP-->
+@section Scripts
+{
+  <script src="@Url.Content("~/AppJS/Auth/SignUp.js")" type="module"></script>
+}
+

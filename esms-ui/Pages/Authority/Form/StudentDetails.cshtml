@@ -1,0 +1,172 @@
+﻿@page
+@{
+    ViewData["Title"] = "STUDENT CHECK LIST";
+    Layout = "_Layout";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 " >
+            <h4 class="header-title" >
+                @ViewData["Title"]
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5 col-md-5 col-lg-5 did-floating-label-content ">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 did-floating-label-content text-right"  >
+        <input class="did-floating-input" id="txt_startfromcertificate" type="date">
+        <label class="did-floating-label"></label>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2  text-right"  >
+        <input class="did-floating-input" id="txt_endfromcertificate" type="date">
+        <label class="did-floating-label"></label>
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3 text-right">
+        <button type="button" id="search_certificates" class="btn btn-light font-weight-bolder"
+             aria-haspopup="true" aria-expanded="false">
+            <span class="svg-icon svg-icon-md">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+                    <path fill="#616161" d="M29.171,32.001L32,29.172l12.001,12l-2.828,2.828L29.171,32.001z"></path><path fill="#616161" d="M36,20c0,8.837-7.163,16-16,16S4,28.837,4,20S11.163,4,20,4S36,11.163,36,20"></path><path fill="#37474f" d="M32.476,35.307l2.828-2.828l8.693,8.693L41.17,44L32.476,35.307z"></path><path fill="#64b5f6" d="M7,20c0-7.18,5.82-13,13-13s13,5.82,13,13s-5.82,13-13,13S7,27.18,7,20"></path>
+                </svg>
+            </span> SEARCH
+        </button>
+        <button type="button" id="appr_certificates" class="btn btn-light font-weight-bolder"
+             aria-haspopup="true" aria-expanded="false">
+            <span class="svg-icon svg-icon-md">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24" width="24" version="1.1" id="Layer_1" viewBox="0 0 300.16 300.16" xml:space="preserve">
+                <g>
+                    <g>
+                        <path style="fill:#333333;" d="M213.133,213.016H87.027l1.351-5.921c1.52-6.657,4.343-12.771,8.395-18.174    c9.537-12.723,14.577-28.97,14.577-46.985c0-16.078-4.473-30.994-12.941-43.131C91.04,88.246,87.143,75.843,87.143,62.936    c0-17.264,6.85-33.366,19.288-45.343c12.432-11.972,28.786-18.169,46.094-17.55c33.657,1.278,60.792,29.75,60.492,63.464    c-0.111,12.587-3.946,24.71-11.091,35.056c-8.579,12.418-13.115,27.416-13.115,43.368c0,18.014,5.04,34.262,14.577,46.99    c4.052,5.403,6.875,11.517,8.395,18.174L213.133,213.016z M99.668,203.333h100.825c-1.235-3.065-2.856-5.945-4.851-8.603    c-10.806-14.417-16.514-32.669-16.514-52.794c0-17.932,5.127-34.833,14.829-48.882c6.042-8.743,9.281-18.992,9.378-29.634    c0.252-28.53-22.706-52.62-51.177-53.7c-14.596-0.586-28.486,4.715-39.006,14.843c-10.53,10.138-16.325,23.766-16.325,38.372    c0,10.912,3.292,21.403,9.523,30.331c9.605,13.773,14.684,30.602,14.684,48.669c0,20.12-5.708,38.377-16.514,52.789    C102.524,197.388,100.902,200.269,99.668,203.333z"/>
+                        <path style="fill:#F9BA48;" d="M300.16,300.159H0v-96.826h300.16V300.159z"/>
+                        <path style="fill:#333333;" d="M29.048,232.381c-8.007,0-14.524,6.516-14.524,14.524v24.206h9.683v-9.683h9.683v9.683h9.683    v-24.206C43.572,238.897,37.055,232.381,29.048,232.381z M24.206,251.746v-4.841c0-2.668,2.174-4.841,4.841-4.841    s4.841,2.174,4.841,4.841v4.841H24.206z"/>
+                        <path style="fill:#333333;" d="M62.937,232.381H48.413v38.73h9.683v-9.683h4.841c8.007,0,14.524-6.516,14.524-14.524    C77.461,238.897,70.944,232.381,62.937,232.381z M62.937,251.746h-4.841v-9.683h4.841c2.668,0,4.841,2.174,4.841,4.841    S65.604,251.746,62.937,251.746z"/>
+                        <path style="fill:#333333;" d="M96.826,232.381H82.302v38.73h9.683v-9.683h4.841c8.007,0,14.524-6.516,14.524-14.524    C111.35,238.897,104.833,232.381,96.826,232.381z M96.826,251.746h-4.841v-9.683h4.841c2.668,0,4.841,2.174,4.841,4.841    S99.493,251.746,96.826,251.746z"/>
+                        <path style="fill:#333333;" d="M145.239,246.905c0-8.007-6.516-14.524-14.524-14.524h-14.524v38.73h9.683v-12.52l9.683,9.862    v2.658h9.683v-2.658c0-2.701-1.051-5.238-2.963-7.151l-2.813-2.813C142.968,255.837,145.239,251.63,145.239,246.905z     M130.715,251.746h-4.841v-9.683h4.841c2.668,0,4.841,2.174,4.841,4.841S133.382,251.746,130.715,251.746z"/>
+                        <path style="fill:#333333;" d="M164.604,232.381c-8.007,0-14.524,6.516-14.524,14.524v9.683c0,8.008,6.516,14.524,14.524,14.524    s14.524-6.516,14.524-14.524v-9.683C179.128,238.897,172.611,232.381,164.604,232.381z M169.445,256.587    c0,2.668-2.174,4.841-4.841,4.841s-4.841-2.174-4.841-4.841v-9.683c0-2.668,2.174-4.841,4.841-4.841s4.841,2.174,4.841,4.841    V256.587z"/>
+                        <polygon style="fill:#333333;" points="208.175,241.134 200.913,259.289 193.651,241.134 193.651,232.381 183.969,232.381     183.969,242.993 195.215,271.111 206.612,271.111 217.858,242.993 217.858,232.381 208.175,232.381   "/>
+                        <polygon style="fill:#333333;" points="222.699,271.111 246.906,271.111 246.906,261.429 232.382,261.429 232.382,256.587     246.906,256.587 246.906,246.905 232.382,246.905 232.382,242.064 246.906,242.064 246.906,232.381 222.699,232.381   "/>
+                        <path style="fill:#333333;" d="M261.429,232.381h-9.683v38.73h9.683c10.68,0,19.365-8.685,19.365-19.365    C280.795,241.066,272.109,232.381,261.429,232.381z M261.429,261.429v-19.365c5.34,0,9.683,4.343,9.683,9.683    C271.112,257.087,266.769,261.429,261.429,261.429z"/>
+                        <path style="fill:#333333;" d="M116.191,62.936h-9.683c0-24.022,19.549-43.572,43.572-43.572v9.683    C131.392,29.047,116.191,44.249,116.191,62.936z"/>
+                        <circle style="fill:#333333;" cx="116.191" cy="77.46" r="4.841"/>
+                    </g>
+                </g>
+                </svg>
+            </span> APPROVED
+        </button>
+    </div>
+    <div class="col-12 mt-3 ">
+        <div class="card pt-4 pb-4">
+            <div class="card-body table-responsive" id="export_div">
+                <table id="data_table" class="table  table-striped table-bordered" style="width:100% ;" >
+                  <thead>
+                        <tr>
+                            @* <th></th> *@
+                            <th>CODE</th>   
+                            <th>NO</th>
+                            <th>STUDENT</th>
+                            <th>CNIC</th>
+                            <th>COURSE</th>
+                            <th>STATUS</th> 
+                            <th>REG ON</th>
+                            <th>REG BY</th>
+                            <th>VOUCHER</th>
+                            <th>PAY</th>
+                            <th>CERTIFICATE</th>
+                            <th>COMPANY</th>
+                            <th> <input type="checkbox" id="select_all_student" /> </th>
+                        </tr>
+                    </thead>
+                </table>
+                 <div class="text-center" id="table_loading_image" ><img src="~/img/brands/pro_gif.gif" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="data_Model" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header p-3" style="background-color: #3e4676;">
+                <h4 class="modal-title text-white"> @ViewData["Title"]</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="create_form">
+                    <fieldset id="SubmitForm">
+                        <div class="row ">
+                            <div class="col-lg-7 " >
+                            </div>
+                            <div class="col-lg-4 did-floating-label-content" >
+                                <input class="did-floating-input" id="txt_code" type="text">
+                                <label class="did-floating-label" >Code</label>
+                            </div>
+                            <div class="col-lg-1 did-floating-label-content" >
+                                <button type="button" id="btn_codegenerate" class="btn btn-primary align-middle   m-1" style="background-color: #2c497d;color:white"><i class="align-middle fas fa-fw fa-sync-alt"></i></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row m-2">
+                            <div class="col-lg-10">
+                                    <label class="col-form-label col-lg-9" id="txt_id" ></label>
+                                    @* <label class="col-form-label col-lg-9" id="txt_code" ></label> *@
+                            </div>
+                        </div>
+                        <div class="row form-group m-2">
+                            <div class="col-lg-12 did-floating-label-content">
+                                <select class="did-floating-select" id="sel_student" >
+                                    
+                                </select>
+                                <label class="did-floating-label">Student</label>
+                            </div>
+                        </div>
+                        <div class="row p-4 ">
+                            <h4 class="ml-4 mb-5" style="justify-content: center;" >STUDENT COURSE INFORMARION</h4>
+                            <br>
+                            @* <span><p>This information given in this section is consider as the information of the primary account owner information</p></span> *@
+                            <hr>
+                            <div class="col-lg-12 did-floating-label-content table-responsive" >
+                                <table id="course_data_table" class="table table-hover" style="width:100% ;" >
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>COURSE</th>
+                                            <th>START</th>
+                                            <th>END</th>
+                                            <th>STATUS</th>
+                                            <th>PAY STATUS</th>
+                                            <th>COMPANY</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row form-group m-2">
+                            <div class="col-lg-12" style="text-align:right;">
+                                <button type="button" class="btn " data-dismiss="modal" style="background-color: #2c497d;color:white">Close</button>
+                                <input id="btn_sav" type="button" value="Save"
+                                class="btn " style="background-color: #7566cc;color:white" />
+                                <input id="btn_upd" type="button" value="Update" 
+                                class="btn btn-warning" style="background-color: #7566cc;color:white" />
+                            </div>
+                        </div>
+                        
+                    </fieldset>
+                </form>
+            </div>
+            @* <div class="modal-footer">
+                
+            </div> *@
+        </div>
+    </div>
+</div>
+<!-- END  modal -->
+@section Scripts
+{
+    <script src="@Url.Content("~/AppJS/Authority/Form/StudentDetails.js")" type="module"></script>
+}

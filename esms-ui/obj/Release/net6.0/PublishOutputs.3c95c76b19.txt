@@ -1,0 +1,9 @@
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\UI.exe
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\appsettings.Development.json
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\appsettings.json
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\package-lock.json
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\package.json
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\UI.dll
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\UI.deps.json
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\UI.runtimeconfig.json
+D:\Projects\WFM\UI\bin\Release\net6.0\publish\UI.pdb

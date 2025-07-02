@@ -1,0 +1,303 @@
+@page
+@{
+    ViewData["Title"] = "Requester";
+    Layout = "_Layout";
+}
+<div class="container-fluid">
+    <div class="header">
+        <h1 class="header-title">
+            Requester Overview
+        </h1>
+        <p class="header-subtitle">Your Task Details </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-lg-3 col-xl">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">Complete</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle bg-primary-dark">
+                                    <i class="align-middle" data-feather="dollar-sign"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3">200</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-xl">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">Pending</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle bg-primary-dark">
+                                    <i class="align-middle" data-feather="shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3">12</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-xl">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">In Process</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle bg-primary-dark">
+                                    <i class="align-middle" data-feather="activity"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3">30</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-xl">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col mt-0">
+                            <h5 class="card-title">Total</h5>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <div class="avatar-title rounded-circle bg-primary-dark">
+                                    <i class="align-middle" data-feather="dollar-sign"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="display-5 mt-1 mb-3">300</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    
+    <div class="col-12 mt-3 ">
+        <div class="card pt-4 pb-4">
+            <div class="col-12 text-right">
+                    <button type="button" class="btn btn-light align-middle" id="openmodal" data-toggle="modal" data-target="#data_Model"><i class="align-middle mr-2 fas fa-fw fa-user"></i>REQUEST</button>
+                </div>
+            <div class="card-body">
+                <table id="data_table" class="table table-responsiv table-striped table-bordered" style="width:100% ;" >
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Code</th>
+                            <th>Asset</th>
+                            <th>User</th>
+                            <th>Date</th>
+                            <th>Approved</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-12 col-lg-4 d-flex">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <div class="card-actions float-right">
+                        <a href="#" class="mr-1">
+                            <i class="align-middle" data-feather="refresh-cw"></i>
+                        </a>
+                        <div class="d-inline-block dropdown show">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <i class="align-middle" data-feather="more-vertical"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="card-title mb-0">Requestes</h5>
+                </div>
+                <div class="card-body d-flex w-100">
+                    <div class="align-self-center chart chart-lg">
+                        <canvas id="chartjs-dashboard-bar-alt"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xxl-8 d-flex">
+            <div class="card flex-fill w-100">
+                <div class="card-header">
+                    <div class="card-actions float-right">
+                        <a href="#" class="mr-1">
+                            <i class="align-middle" data-feather="refresh-cw"></i>
+                        </a>
+                        <div class="d-inline-block dropdown show">
+                            <a href="#" data-toggle="dropdown" data-display="static">
+                                <i class="align-middle" data-feather="more-vertical"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="card-title mb-0">Requestes</h5>
+                </div>
+                <div class="card-body py-3">
+                    <div class="chart chart-md">
+                        <canvas id="chartjs-dashboard-line"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+<div class="modal fade" id="data_Model" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Requester</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="create_form">
+                    <div class="row m-2">
+                        <div class="col-lg-10">
+                                <label class="col-form-label col-lg-9" id="txt_id" hidden></label>
+                        </div>
+                        <div class="col-lg-12" style="text-align:right;">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input id="btn_sav" type="button" value="Request"
+                            class="btn btn-success" />
+                            <input id="btn_upd" type="button" value="Request Update"
+                            class="btn btn-warning" />
+                        </div>
+                    </div>
+                    <br>
+                    <fieldset id="SubmitForm">
+                        @* <div class="row form-group m-2">
+                            <div class="col-lg-4 did-floating-label-content" >
+                                <input class="did-floating-input" id="txt_barcode" type="text">
+                                <label class="did-floating-label">Code</label>
+                            </div>
+                            <div class="col-lg-2 p-1" >
+                                <button type="button" class="btn btn-primary align-middle" data-toggle="modal" data-target="#asset_grid"><i class="align-middle fas fa-fw fa-plus-square"></i></button>
+                                <button type="button" class="btn btn-primary align-middle" ><i class="align-middle fas fa-barcode"></i></button>
+                            </div>
+                        </div> *@
+                        <div class="row form-group m-2">
+                             <div class="col-lg-6 did-floating-label-content" >
+                                <input class="did-floating-input" id="txt_code" type="number">
+                                <label class="did-floating-label">Code</label>
+                            </div>
+                            <div class="col-lg-6 did-floating-label-content">
+                                <select class="did-floating-select" id="txt_asset" >
+
+                                </select>
+                                <label class="did-floating-label">Asset</label>
+                            </div>
+                            <div class="col-lg-6 did-floating-label-content">
+                                <select class="did-floating-select" id="txt_user" >
+
+                                </select>
+                                <label class="did-floating-label">User</label>
+                            </div>
+                            <div class="col-lg-6 did-floating-label-content" >
+                                <input class="did-floating-input" id="txt_date" type="date">
+                                <label class="did-floating-label">Date</label>
+                            </div>
+                            
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="asset_grid" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> ASSETS </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <form id="create_form">
+                    <fieldset id="SubmitForm">
+                        <div class="row form-group m-2">
+                           <table id="datatables-dashboard-products" class="table table-striped my-0">
+                    <thead>
+                        <tr>
+                            <td>Barcode</td>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HCAM128134223</td>
+                            <td>Laptop</td>
+                        </tr>
+                        <tr>
+                            <td>HCAM128102372</td>
+                            <td>Mouce</td>
+                        </tr>
+                        <tr>
+                            <td>HCAM213322221</td>
+                            <td>Keyboard</td>
+                        </tr>
+                        <tr>
+                            <td>HCAM213322221</td>
+                            <td>LCD</td>
+                        </tr>
+                        <tr>
+                            <td>ADSM213322221</td>
+                            <td>Headphones</td>
+                        </tr>
+                    </tbody>
+                </table>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+@section Scripts
+{
+  <script src="@Url.Content("/AppJS/Requester/Requester.js")" type="module"></script>
+}

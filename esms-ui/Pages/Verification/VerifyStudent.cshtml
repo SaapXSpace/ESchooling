@@ -1,0 +1,163 @@
+@page
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+	<title>EINSTITUTE [ STUDENT VERIFICATION ]</title>
+	<link rel="icon" href="~/img/brands/degree.png" type="image/jpg">
+	<link href="~/css/floatinglabels.css" rel="stylesheet" asp-append-version="true"> 
+    <link href="~/css/modern.css" rel="stylesheet" asp-append-version="true"> 
+    <script src="~/js/settings.js" asp-append-version="true"></script>
+    <link href="~/js/sweet-alert/sweet-aleart.css" rel="stylesheet">
+	<script src="~/js/sweet-alert/sweet-aleart.min.js"></script>
+    <script src="~/js/app.js"></script>
+    <script src="~/js/dashboard.js"></script>
+    <script src="~/js/QrCode/JSQr.js"></script>
+</head>
+<!-- SET YOUR THEME -->
+<body class="theme-blue">
+	<div class="splash active">
+		<div class="splash-icon"></div>
+	</div>
+	<main class="main h-100 w-100">                        
+		<div class="container-fluid h-100">
+			<div class="row h-100">
+				<div class="col-sm-8 col-md-6 col-lg-5 mx-auto d-table h-100">
+					<div class="d-table-cell align-middle">
+						<div class="text-center">
+                            <hr>
+                            <img src="~/img/brands/einstituteLogo.png" alt=""  width="80%" >
+							<hr>
+						</div>
+						<div class="mt-4">
+                            <form>
+                                <div class="tab">
+                                    <ul class="nav nav-tabs row" role="tablist">
+                                        <li class="nav-item text-center col-lg-6"><a class="nav-link active" href="#tab-1" data-toggle="tab" role="tab"><h5 class="pt-2 pl-2 " >BY SSB / CDC / CNIC / PASSPORT </h5></a></li>
+                                        <li class="nav-item text-center col-lg-6"><a class="nav-link" href="#tab-2" data-toggle="tab" role="tab"><h5 class="pt-2 pl-2 " >BY QR-CODE</h5></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active p-4" id="tab-1" role="tabpanel">
+                                            <div class="form-group">
+                                                <label>STUDENT SSB / CDC / CNIC / PASSPORT</label>
+                                                <input class="form-control form-control-lg" id="txt_ssb" placeholder="Enter Student SSB / CDC / CNIC / PASSPORT" />
+                                            </div>
+                                            <div class="text-center mt-3">
+                                                <button type="button" class="btn btn-primary" id="btn_verify" style="background-color: #3e4676;width: 100%" >VERIFICATION</button>
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="tab-pane p-4" id="tab-2" role="tabpanel">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6 text-center" >
+                                                        <div class="image-container" style="cursor:pointer;">
+                                                            <img  class="rounded border" id="qrimage" src="~/img/images/upload-qr.jpg" alt="Placeholder" width="200" height="200">
+                                                            <input type="file" id="image-upload-input" accept="image/*" style="display: none;">
+                                                        </div>
+                                                    </div>
+                                                     <div class="col-lg-6 text-center" >
+                                                        <div class="image-container" style="cursor:pointer;" >
+                                                           <img  class="rounded border" id="qrscanner" src="~/img/images/scan-qr.jpg" alt="Placeholder" width="200" height="200">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center" style="background-color: white;position:sticky;">
+                                            <h4> Powered By |  <span><img src="~/img/brands/our_logo.png" width="13%" alt=""></span> </h4>
+                                        </div>
+                                        <hr>
+                                        <h5 class="text-center"> If you facing any issue email us at <a href="mailto:info@saapx.com"> info@saapx.com </a>  or <a href="mailto:support@saapx.com"> support@saapx.com </a> </h5>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+    <div class="modal fade" id="data_Model" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg " role="document">
+            <div class="modal-content">
+                <div class="modal-header p-3" style="background-color: #3e4676;">
+                    <h4 class="modal-title text-white"> @ViewData["Title"]</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body ">
+                    <form id="create_form">
+                        <fieldset id="SubmitForm">
+                            <div class="row ">
+                                <div class="col-sm-12 col-md-12 col-lg-12 did-floating-label-content p-2" >
+                                    <div class="row p-3" >
+                                        <div class=" col-sm-12 col-md-12 col-lg-12  mb-1" >
+                                             <h3 class="" >STUDENT SSB       : <Span id="span_ssb"> </Span></h3>  
+                                        </div>
+                                         <div class="col-sm-12 col-md-12 col-lg-12 mb-1" >
+                                             <h3 class="" >STUDENT NAME      : <Span id="span_name">  </Span></h3>  
+                                        </div>
+                                         <div class="col-sm-12 col-md-12 col-lg-12 mb-1" >
+                                             <h3 class="" >FATHER NAME      : <Span id="span_father">  </Span></h3>  
+                                        </div>
+                                         <div class="col-sm-12 col-md-12 col-lg-12 mb-1" >
+                                             <h3 class="" >NATIONAL IDENTITY : <Span id="span_cnic">  </Span></h3>  
+                                        </div>
+                                         <div class="col-sm-12 col-md-12 col-lg-12 mb-1" >
+                                             <h3 class="" >PHONE NUMBER      : <Span id="span_phone">  </Span></h3>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            @* <hr> *@
+                            <div class="row">
+                                <div class="col-lg-12 did-floating-label-content table-responsive" >
+                                <table id="course_data_table" class="table table-hover" style="width:100% ;" >
+                                    <thead>
+                                        <tr>
+                                            <th>CERTIFICATE</th>
+                                            <th>COURSE NAME</th>
+                                            <th>ISSUE DATE</th>
+                                            @* <th>EXPIRY DATE</th> *@
+                                        </tr>
+                                    </thead>
+                                    <tbody id="voucher_data_table_tbody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END  modal -->
+	<svg width="0" height="0" style="position:absolute">
+		<defs>
+			<symbol viewBox="0 0 512 512" id="ion-ios-pulse-strong">
+				<path
+					d="M448 273.001c-21.27 0-39.296 13.999-45.596 32.999h-38.857l-28.361-85.417a15.999 15.999 0 0 0-15.183-10.956c-.112 0-.224 0-.335.004a15.997 15.997 0 0 0-15.049 11.588l-44.484 155.262-52.353-314.108C206.535 54.893 200.333 48 192 48s-13.693 5.776-15.525 13.135L115.496 306H16v31.999h112c7.348 0 13.75-5.003 15.525-12.134l45.368-182.177 51.324 307.94c1.229 7.377 7.397 11.92 14.864 12.344.308.018.614.028.919.028 7.097 0 13.406-3.701 15.381-10.594l49.744-173.617 15.689 47.252A16.001 16.001 0 0 0 352 337.999h51.108C409.973 355.999 427.477 369 448 369c26.511 0 48-22.492 48-49 0-26.509-21.489-46.999-48-46.999z">
+				</path>
+			</symbol>
+		</defs>
+	</svg>
+    @using Microsoft.Extensions.Configuration
+    @inject IConfiguration Configuration
+    <script>
+        var apiUrl = @Json.Serialize(@Configuration.GetSection("UrlAPI")["IFS"]);
+        var api_signature = @Json.Serialize(@Configuration.GetSection("UrlAPI")["SIG"]);
+    </script>
+	<script src="@Url.Content("~/AppJS/Verification/VerifyStudent.js")" type="module"></script>
+</body>
+</html>

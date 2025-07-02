@@ -1,0 +1,266 @@
+@page
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> EINSTITUTE [ @ViewData["Title"] ]</title>
+	<link rel="icon" href="~/img/brands/degree.png" type="image/jpg">
+	<link href="~/css/floatinglabels.css" rel="stylesheet" asp-append-version="true"> 
+    <link href="~/css/modern.css" rel="stylesheet" asp-append-version="true"> 
+	
+	<link href="~/js/sweet-alert/sweet-aleart.css" rel="stylesheet">
+	<script src="~/js/sweet-alert/sweet-aleart.min.js"></script>
+	<script src="~/js/settings.js" asp-append-version="true"></script>
+
+	<script src="~/js/QrCode/qrcode.js" asp-append-version="true"></script>
+	<script src="~/js/QrCode/qrcode.min.js" asp-append-version="true"></script>
+	<script src="~/js/QrCode/html5-qrcode.min.js" asp-append-version="true"></script>
+
+    @* <script src="https://cdn.jsdelivr.net/npm/qrcode"></script> *@
+
+    <script src="~/js/app.js"></script>
+    <script src="~/js/dashboard.js"></script>
+    @using Microsoft.Extensions.Configuration
+    @inject IConfiguration Configuration
+    <script>
+        var apiUrl = @Json.Serialize(@Configuration.GetSection("UrlAPI")["IFS"]);
+        var api_signature = @Json.Serialize(@Configuration.GetSection("UrlAPI")["SIG"]);
+    </script>
+    <script src="@Url.Content("~/AppJS/Certificate/Report/Certificate.js")" type="module"></script>
+
+	<!-- END SETTINGS -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-120946860-7');
+    </script>
+	
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh;
+            background-color: white; /* Change to your preferred background color */
+        }
+        
+        #container_certificate{
+            padding: 0;
+            min-height: 15vh;
+        }
+
+        .pdf-container {
+            width: auto; /* PDF width in inches */
+            height: auto; /* PDF height in inches */
+            background-color: white; /* Optional, set the background color of the div */
+            @* border: 1px dotted black; /* Optional, add a border to the div */ *@
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional, add a shadow to the div */
+            background-image: url("/img/certificate/line_border.png");
+            background-repeat: round;
+            background-size: cover;
+            background-color: white;
+            padding: 50px;
+        }
+
+        .pdf-container-image-border {
+            width: auto; /* PDF width in inches */
+            height: auto; /* PDF height in inches */
+            background-color: white; /* Optional, set the background color of the div */
+            @* border: 1px dotted black; /* Optional, add a border to the div */ *@
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional, add a shadow to the div */
+            background-image: url("/img/certificate/clip_border_old.png");
+            background-repeat: round;
+            background-size: cover;
+            background-color: white;
+            padding: 50px;
+        }
+
+        .header_img {
+            width: 50%;
+        }
+
+        .heading_row {
+            justify-content: center;
+        }
+
+        .profile_img{
+            border: 1px dotted black; /* Optional, add a border to the div */
+            justify-content: center;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+        }
+
+        td {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            border: 3px solid black;
+        }
+
+        th {
+            padding: 8px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            border: 3px solid black;
+        }
+
+        .SSTth {
+            padding: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            color: black;
+            background-color: rgb(235, 199, 0) !important;
+            font-weight: bold;
+            text-align: center;
+            border: 3px solid black;
+        }
+
+
+        .BRM_TABLE,.IIRCA_TABLE, td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            text-align: left;
+            font-weight: normal;
+            padding-left: 10px;
+            color: black;
+            border: 3px solid black;
+        }
+
+        .IIRCA_TABLE, td {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            text-align: left;
+            font-weight: normal;
+            padding-left: 10px;
+            color: black;
+            border: 3px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container_certificate">
+        
+    </div>
+    
+    @* <img hidden src="" id="qrcode-image" alt=""> *@
+    @* <div class="container pdf-container">
+        <!-- Your content goes here -->
+        <div class="container-fluid p-5" >
+            <div class="row" style="justify-content: center;">
+                <img src="/img/certificate/Header.png" class="header_img" alt="">
+            </div>
+            <br>
+            <div class="row heading_row">
+                <b><h1 style="font-size: 30px;font-weight: bold;justify-content: center;font-family: Arial, sans-serif"><u>CERTIFICATE</u></h1></b>
+            </div>
+            <div class="row">
+                <h4 style="font-family: Arial, sans-serif;font-family: 20px;"> Certificate of Proficiency No. <span style="font-weight: bold;"> <u> ${data.certificateNo} </u> </span> </h4>
+            </div>
+            <div class="row">
+                <h3 style="font-family: Arial, sans-serif;font-family: 20px;">  This is to certify that Mr. <span style="font-weight: bold;"> <u> ${data.studentName} </u>  </span> </h3>
+            </div>
+            <div class="row">
+                <h3 style="font-family: Arial, sans-serif;font-family: 20px;">  Seaman book SSB/CDC.No. <span style="font-weight: bold;"> <u> ${data.ssb} </u> </span> </h3>
+            </div>
+            <div class="row">
+                <h4 style="font-family: Arial, sans-serif;">  has successfully completed a training based on IMO model course 2.03 for </h4>
+            </div>
+            <br>
+            <div class="row heading_row">
+                <h2 style="font-family: Arial, sans-serif;font-family: 20px;color: blue;"> CERTIFICATE OF PROFICIENCY <span style="font-weight: bold;"> IN ADVANCED FIRE FIGHTING  </span> </h2>
+            </div>
+            <br>
+            <div class="row">
+                <h4 style="font-family: Arial, sans-serif;">  held from <span style="font-weight: bold;font-size: 20px;"> <u> ${moment(data.startDate).format("DD-MMM-YYYY") } </u> </span> to <span style="font-weight: bold;font-size: 20px;"> <u> ${moment(data.endDate).format("DD-MMM-YYYY") } </u></span> and has been found duly qualified in </h4>
+            </div>
+            <div class="row">
+                <h4 style="font-family: Arial, sans-serif;">  accordance with the provisions of: </h4>
+            </div>
+            <br>
+
+                <div class="row"><h4 style="font-family: Arial, sans-serif;"> Chapter VI, Regulation VI/1, of STCW Convention 1978, as amended and </h4></div>
+                <div class="row"><h4 style="font-family: Arial, sans-serif;">  Chapter VI, Section A-VI/1, Para 2 & Table A-VI/1-1 of STCW Code 1978, as amended.  </h4></div>
+                <br>
+            <div class="row">
+                <h4 style="font-family: Arial, sans-serif;">  This training course syllabus is approved by the Competent Authority, Directorate General of Ports & Shipping, Ministry of Maritime Affairs. </h4>
+            </div>
+            <br>
+            <div class="row">
+                <h4 style="font-family: Arial, sans-serif;color: green;"> This certificate is issued under the authority of the Director General of Ports and Shipping Government of Pakistan. </h4>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6" style="text-align: start;">
+                    <h4 style="font-family: Arial, sans-serif;font-family: 20px;"> Date of birth of certificate holder: <span style="font-weight: bold;"> <u> ${moment(data.dob).format("DD-MMM-YYYY") } </u> </span> </h4>
+                </div>
+                <div class="col-md-6" style="text-align: end;" >
+                    <h4 style="font-family: Arial, sans-serif;font-family: 20px;"> National Identity Card No.:  <span style="font-weight: bold;"> <u> ${data.cnic} </u> </span> </h4>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6" style="text-align: start;" >
+                    <h4 style="font-family: Arial, sans-serif;font-family: 20px;"> Date of issue of the certificate: <span style="font-weight: bold;"> <u> ${moment(data.issueDate).format("DD-MMM-YYYY") }  </u> </span> </h4>
+                </div>
+                <div class="col-md-6" style="text-align: end;">
+                    <h4 style="font-family: Arial, sans-serif;font-family: 20px;"> Date of Expiry:  <span style="font-weight: bold;"> <u> ${moment(data.endDate).format("DD-MMM-YYYY") }  </u> </span> </h4>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="row pl-3">
+                        <div class="profile_img">
+                            <img src="data:image/jpeg;base64,${data.image}" width="150" height="150" alt="">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <img src="/img/certificate/stamp.jpeg" width="300" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="row pt-5">
+                        <div style="border-bottom: 4px solid #000; width: 100%;"></div>
+                    </div>
+                    <div class="row">
+                        <h4>Signature of Candidate</h4>
+                    </div>
+                    <div class="row pt-5">
+                        <div style="border-bottom: 4px solid #000; width: 100%;"></div>
+                    </div>
+                    <div class="row">
+                        <h4>Course Incharge – Capt. Syed Mahmood Wali</h4>
+                    </div>
+                    <div class="row pt-5">
+                        <div style="border-bottom: 4px solid #000; width: 100%;"></div>
+                    </div>
+                    <div class="row">
+                        <h4>Director, Training & Studies-Capt. S.M. Ajmal Mahmoodi</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> *@
+    
+</body>
+</html>

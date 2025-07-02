@@ -1,0 +1,25 @@
+@page
+@{
+    ViewData["Title"] = "ADMIN PANEL";
+    Layout = "_Layout";
+}
+
+
+
+<div class="container-fluid">
+    <div class="header">
+        <h1 class="header-title" id="name">
+        </h1>
+    </div>
+</div>
+@section Scripts
+{
+  <script >
+    $(document).ready(function(){
+        console.log("RUN")        
+        var _name = document.getElementById("name")
+            _name.innerText ="WELCOME " + LoginUser.toUpperCase();
+        });
+  </script>
+}
+

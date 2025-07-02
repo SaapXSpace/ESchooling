@@ -1,0 +1,94 @@
+﻿@page
+@{
+    ViewData["Title"] = "CERTIFICATE CRITERIA ";
+    Layout = "_Layout";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 " >
+            <h4 class="header-title" >
+                @ViewData["Title"]
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mt-5 ">
+        <div class="card pt-1 pb-4">
+            <div class="card-body">
+                <main class="content">
+                    <div class="container-fluid">
+                        <Center><h2 style="justify-content: center;"> CERTIFICATE </h2></Center>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4 col-md-5 col-lg-4 col-xl-3">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Certificate Criteria</h5>
+                                    </div>
+                                    <div class="list-group list-group-flush" role="tablist">
+                                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#certificate" role="tab">
+                                          1. Certificate
+                                        </a>
+                                        @* <a class="list-group-item list-group-item-action" data-toggle="list" href="#monthlyledger" role="tab">
+                                          2. Certificate
+                                        </a> *@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-7 col-lg-8 col-xl-9" >
+                                <div class="tab-content">
+                                    @* 2 *@
+                                    <div class="tab-pane fade show active" id="certificate" role="tabpanel">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 did-floating-label-content">
+                                                            <select class="did-floating-select" id="sel_student">
+                                                                
+                                                            </select>
+                                                            <label class="did-floating-label">Student</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                         <div class="col-lg-12 did-floating-label-content table-responsive" >
+                                                            <table id="course_data_table" class="table table-hover" style="width:100% ;" >
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Select</th>
+                                                                        <th>Course</th>
+                                                                        <th>Status</th>
+                                                                        <th>Type</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="course_data_table_tbody">
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="text-center" id="table_loading_image" style="display: none;" ><img src="~/img/brands/pro_gif.gif" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                     <div class="row" style="justify-content: end;">
+                                                        <button type="button" class="btn btn-primary" id="btn_view_certificate" style="background-color: #3e4676;" >View Certificate</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END  modal -->
+@section Scripts
+{
+  <script src="@Url.Content("~/AppJS/Payroll/Certificate/Criteria.js")" type="module"></script>
+}

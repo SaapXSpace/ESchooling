@@ -1,0 +1,66 @@
+﻿@page
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LoginLayout";
+}
+<style>
+#parentContainer {
+  background-color: #005e89;
+  position: relative;
+  background-image: url("/img/brands/einstitute-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover; /* or ba  ckground-size: contain; */
+}
+#childContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+</style>
+<main class="main h-100 w-100" id="parentContainer">
+    <div class="container h-100 " >
+        <div class="row h-100">
+            <div class="col-sm-10 col-md-6 col-lg-4 mx-auto d-table h-100  " id="childContainer" >
+                <div class="d-table-cell align-middle">
+                    <div class="card" id="logincard" style="border-Top: 15px solid #818ab1;border-Bottom: 15px solid #818ab1;">
+                        <div class="card-body">
+                            <div class="text-center mb-4 mt-4">
+                                    <h1 class="h2 text-light"><img src="~/img/brands/einstituteLogo.png" alt=""  width="80%" ></h1>            
+                                     @* <h1 class="h1 text-bold" style="color: #2c497d;font-weight: bold;font-family: Arial, Helvetica, sans-serif;"> MARITIME TRAINING INSTITUTE</h1>
+                                     <center>  <h3 style="color:#7566cc;" >TRAINING INNOVATION</h3></center> *@
+                                </div>
+                            <div class="m-sm-12">
+                                <form id="create_form">
+                                    <fieldset id="SubmitForm">
+                                        <div class="row form-group m-2">
+                                            <div class="col-lg-12 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_email" type="text">
+                                                <label class="did-floating-label">Email</label>
+                                            </div>
+                                            <div class="col-lg-12 did-floating-label-content" >
+                                                <input class="did-floating-input" id="txt_password" type="password">
+                                                <label class="did-floating-label">Password</label>
+                                            </div>
+                                            <div class="col-lg-12 did-floating-label-content" >
+                                                <button type="button" class="btn btn-lg col-lg-12 text-light" id="btn_login" style="background-color:#2c497d;">Login</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@section Scripts
+{
+  <script src="@Url.Content("~/AppJS/Auth/SignIn.js")" type="module"></script>
+}
+

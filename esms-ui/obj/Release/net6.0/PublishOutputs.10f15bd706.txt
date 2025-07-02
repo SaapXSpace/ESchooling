@@ -1,0 +1,9 @@
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\UI.exe
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\appsettings.Development.json
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\appsettings.json
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\package-lock.json
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\package.json
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\UI.dll
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\UI.deps.json
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\UI.runtimeconfig.json
+D:\FYP\B&B\UI\bin\Release\net6.0\publish\UI.pdb

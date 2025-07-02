@@ -1,0 +1,9 @@
+D:\Projects\MTI\3-mti-build\1.2.2\UI\UI.exe
+D:\Projects\MTI\3-mti-build\1.2.2\UI\appsettings.Development.json
+D:\Projects\MTI\3-mti-build\1.2.2\UI\appsettings.json
+D:\Projects\MTI\3-mti-build\1.2.2\UI\package-lock.json
+D:\Projects\MTI\3-mti-build\1.2.2\UI\package.json
+D:\Projects\MTI\3-mti-build\1.2.2\UI\UI.dll
+D:\Projects\MTI\3-mti-build\1.2.2\UI\UI.deps.json
+D:\Projects\MTI\3-mti-build\1.2.2\UI\UI.runtimeconfig.json
+D:\Projects\MTI\3-mti-build\1.2.2\UI\UI.pdb

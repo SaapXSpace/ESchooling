@@ -1,0 +1,10 @@
+D:\Projects\IMS\ims-build\v1-\view\UI.exe
+D:\Projects\IMS\ims-build\v1-\view\appsettings.Development.json
+D:\Projects\IMS\ims-build\v1-\view\appsettings.json
+D:\Projects\IMS\ims-build\v1-\view\package-lock.json
+D:\Projects\IMS\ims-build\v1-\view\package.json
+D:\Projects\IMS\ims-build\v1-\view\UI.dll
+D:\Projects\IMS\ims-build\v1-\view\UI.deps.json
+D:\Projects\IMS\ims-build\v1-\view\UI.runtimeconfig.json
+D:\Projects\IMS\ims-build\v1-\view\UI.pdb
+D:\Projects\IMS\ims-build\v1-\view\UI.xml

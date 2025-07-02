@@ -1,0 +1,9 @@
+D:\Projects\MTI\Pub\1.0.1\UI\UI.exe
+D:\Projects\MTI\Pub\1.0.1\UI\appsettings.Development.json
+D:\Projects\MTI\Pub\1.0.1\UI\appsettings.json
+D:\Projects\MTI\Pub\1.0.1\UI\package-lock.json
+D:\Projects\MTI\Pub\1.0.1\UI\package.json
+D:\Projects\MTI\Pub\1.0.1\UI\UI.dll
+D:\Projects\MTI\Pub\1.0.1\UI\UI.deps.json
+D:\Projects\MTI\Pub\1.0.1\UI\UI.runtimeconfig.json
+D:\Projects\MTI\Pub\1.0.1\UI\UI.pdb
