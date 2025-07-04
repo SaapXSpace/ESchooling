@@ -60,3 +60,10 @@ nunit-*.xml
 /esms-ui/obj/Debug/net6.0/UI.AssemblyInfoInputs.cache
 /esms-ui/obj/Debug/net6.0/UI.AssemblyInfo.cs
 /esms-ui/.vs/UI/DesignTimeBuild/.dtbcache.v2
+/esms-api/obj/Debug/net6.0/API.AssemblyInfoInputs.cache
+/esms-api/obj/Debug/net6.0/API.AssemblyInfo.cs
+/esms-ui/.vs/ProjectEvaluation/ui.metadata.v9.bin
+/esms-ui/.vs/ProjectEvaluation/ui.projects.v9.bin
+/esms-ui/.vs/ProjectEvaluation/ui.strings.v9.bin
+/esms-ui/.vs/UI/v17/DocumentLayout.json
+/esms-ui/.vs/UI/v17/.suo
