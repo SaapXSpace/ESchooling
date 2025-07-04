@@ -53,3 +53,10 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 .vs/
+/esms-ui/obj/Debug/net6.0/UI.AssemblyInfo.cs
+/esms-ui/obj/Debug/net6.0/UI.AssemblyInfoInputs.cache
+/.gitignore
+/.gitignore
+/esms-ui/obj/Debug/net6.0/UI.AssemblyInfoInputs.cache
+/esms-ui/obj/Debug/net6.0/UI.AssemblyInfo.cs
+/esms-ui/.vs/UI/DesignTimeBuild/.dtbcache.v2
