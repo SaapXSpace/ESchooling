@@ -21,7 +21,6 @@ if (url.has('M')) {
     menuId = window.atob(url.get('M'));
 }
 
-
 // jQuery CONSTRUCTOR
 $(document).ready(function () { 
     render_dates() 
