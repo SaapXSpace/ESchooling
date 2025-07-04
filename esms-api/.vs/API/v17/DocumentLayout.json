@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Backup(Saapx)\\EIMS\\ims-api\\",
+  "WorkspaceRootPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\backup(saapx)\\eims\\ims-api\\shared\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:shared\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-api\\controllers\\payroll\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\payroll\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\backup(saapx)\\eims\\ims-api\\repository\\verification\\iverificationservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:repository\\verification\\iverificationservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-api\\repository\\auth\\iauthservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:repository\\auth\\iauthservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\backup(saapx)\\eims\\ims-api\\repository\\dashboard\\idashboardservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:repository\\dashboard\\idashboardservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\backup(saapx)\\eims\\ims-api\\environment\\register\\serviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:environment\\register\\serviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-api\\controllers\\auth\\authservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\auth\\authservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Builder.cs",
-              "DocumentMoniker": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Shared\\Builder.cs",
-              "RelativeDocumentMoniker": "Shared\\Builder.cs",
-              "ToolTip": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Shared\\Builder.cs",
-              "RelativeToolTip": "Shared\\Builder.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAlwEkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T18:19:20.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IVerificationServiceRepository.cs",
-              "DocumentMoniker": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Repository\\Verification\\IVerificationServiceRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Verification\\IVerificationServiceRepository.cs",
-              "ToolTip": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Repository\\Verification\\IVerificationServiceRepository.cs",
-              "RelativeToolTip": "Repository\\Verification\\IVerificationServiceRepository.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAlwFAAAAATAAAAAAAAAA==",
+              "Title": "IAuthServiceRepository.cs",
+              "DocumentMoniker": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Repository\\Auth\\IAuthServiceRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Auth\\IAuthServiceRepository.cs",
+              "ToolTip": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Repository\\Auth\\IAuthServiceRepository.cs",
+              "RelativeToolTip": "Repository\\Auth\\IAuthServiceRepository.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAvwCoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T18:18:33.951Z",
+              "WhenOpened": "2025-07-04T15:59:55.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IDashboardServiceRepository.cs",
-              "DocumentMoniker": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Repository\\Dashboard\\IDashboardServiceRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Dashboard\\IDashboardServiceRepository.cs",
-              "ToolTip": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Repository\\Dashboard\\IDashboardServiceRepository.cs",
-              "RelativeToolTip": "Repository\\Dashboard\\IDashboardServiceRepository.cs",
-              "ViewState": "AgIAAJEBAAAAAAAAAAAQwJkBAABOAAAAAAAAAA==",
+              "Title": "AuthServiceController.cs",
+              "DocumentMoniker": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Auth\\AuthServiceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Auth\\AuthServiceController.cs",
+              "ToolTip": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Auth\\AuthServiceController.cs",
+              "RelativeToolTip": "Controllers\\Auth\\AuthServiceController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCIAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T18:16:42.895Z",
+              "WhenOpened": "2025-07-04T15:59:44.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServiceRegister.cs",
-              "DocumentMoniker": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Environment\\Register\\ServiceRegister.cs",
-              "RelativeDocumentMoniker": "Environment\\Register\\ServiceRegister.cs",
-              "ToolTip": "D:\\Backup(Saapx)\\EIMS\\ims-api\\Environment\\Register\\ServiceRegister.cs",
-              "RelativeToolTip": "Environment\\Register\\ServiceRegister.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAhwD0AAABeAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Payroll\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Payroll\\DepartmentController.cs",
+              "ToolTip": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Payroll\\DepartmentController.cs",
+              "RelativeToolTip": "Controllers\\Payroll\\DepartmentController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAArwBgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T18:16:18.002Z",
+              "WhenOpened": "2025-07-04T15:56:44.906Z",
               "EditorCaption": ""
             }
           ]

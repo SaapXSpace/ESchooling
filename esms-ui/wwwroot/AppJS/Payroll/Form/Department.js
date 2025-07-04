@@ -125,7 +125,7 @@ function Onload() {
                             { data: 'active','render': function (data, type, full, meta) {if (data) {return '✔'; }else { return '✘'; }  }},
                         ],
                         "order": [[0, "asc"]],
-                        // "pageLength": 10,
+                        "pageLength": 5,
                     });
                     datatablesButtons.buttons().container().appendTo("#data_table_wrapper .col-md-6:eq(0)")
                 }else{

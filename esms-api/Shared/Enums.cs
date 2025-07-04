@@ -28,21 +28,8 @@ namespace API.Shared
             // PAYROLL
 
             Department,
-            CourseCategory,
-            Course,
-            DocumentType,
-            StudentProfile,
-
+            
             // ACCOUNTS
-            BankType,
-            AccountHead,
-            Currency,
-            BankAccount,
-            FeeVoucher,
-            Payment,
-            Ledger,
-            Certificate,
-
             Asset,
             Inventory,
             Request,

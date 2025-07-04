@@ -1,7 +1,7 @@
 
 var end_point;
 $(document).ready(function () {
-    setTimeout("location.href = 'Verification/VerifyStudent';",100);
+    setTimeout("location.href = 'Auth/Signin';",100);
 });
 
 

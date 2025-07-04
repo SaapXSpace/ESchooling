@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Backup(Saapx)\\EIMS\\ims-ui\\UI.csproj",
+      "projectUniqueName": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-ui\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "D:\\Backup(Saapx)\\EIMS\\ims-ui\\UI.csproj",
+      "projectPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-ui\\UI.csproj",
       "packagesPath": "C:\\Users\\AK\\.nuget\\packages\\",
-      "outputPath": "D:\\Backup(Saapx)\\EIMS\\ims-ui\\obj\\",
+      "outputPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-ui\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
