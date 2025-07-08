@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
 using API.Models;
+using API.Model.Payroll;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Layers.ContextLayer 
@@ -37,6 +39,7 @@ namespace API.Layers.ContextLayer
         #region PAYROLL
 
             public DbSet<Department> Departments { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
 
         #endregion
 

@@ -2309,23 +2309,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AK\\.nuget\\packages\\": {},
+    "C:\\Users\\umema\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\API.csproj",
+      "projectUniqueName": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\API.csproj",
-      "packagesPath": "C:\\Users\\AK\\.nuget\\packages\\",
-      "outputPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\obj\\",
+      "projectPath": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\API.csproj",
+      "packagesPath": "C:\\Users\\umema\\.nuget\\packages\\",
+      "outputPath": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\AK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\umema\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2334,7 +2334,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2353,7 +2352,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net6.0": {
@@ -2411,7 +2410,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

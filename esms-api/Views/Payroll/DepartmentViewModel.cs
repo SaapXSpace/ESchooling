@@ -38,4 +38,4 @@ namespace API.Views.Shared
      public class DepartmentDeleteModel : DepartmentBaseModel {
        public Guid Id { get; set; }
     }
-}
+}   
