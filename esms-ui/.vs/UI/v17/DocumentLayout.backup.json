@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\pages\\payroll\\form\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:pages\\payroll\\form\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\payroll\\form\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\payroll\\form\\teacher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\pages\\payroll\\form\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:pages\\payroll\\form\\teacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\service\\apiservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\service\\apiservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\service\\apiservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\service\\apiservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\esms\\eschooling\\esms-ui\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -56,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -83,39 +83,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ApiService.js",
               "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Service\\ApiService.js",
               "RelativeDocumentMoniker": "wwwroot\\AppJS\\Service\\ApiService.js",
               "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Service\\ApiService.js",
               "RelativeToolTip": "wwwroot\\AppJS\\Service\\ApiService.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAIwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-11T09:44:26.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Teacher.js",
               "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
               "RelativeDocumentMoniker": "wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
               "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
               "RelativeToolTip": "wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
-              "ViewState": "AgIAAMcAAACAMzMzMzMrwNUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAowFgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-08T09:01:27.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Teacher.cshtml",
               "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Teacher.cshtml",
               "RelativeDocumentMoniker": "Pages\\Payroll\\Form\\Teacher.cshtml",
               "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Teacher.cshtml",
               "RelativeToolTip": "Pages\\Payroll\\Form\\Teacher.cshtml",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAAAEYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAYwFQAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-08T07:04:14.074Z",
               "EditorCaption": ""

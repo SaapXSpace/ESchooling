@@ -741,6 +741,88 @@
       ]
     },
     {
+      "Route": "img/images/9.jpg",
+      "AssetFile": "img/images/9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "279603"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7I/wppVKX1TkrSRvCniNB29nXkV7yhagQkhxjMo/5jE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 13:56:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7I/wppVKX1TkrSRvCniNB29nXkV7yhagQkhxjMo/5jE="
+        }
+      ]
+    },
+    {
+      "Route": "img/images/9.kgkysuk712.jpg",
+      "AssetFile": "img/images/9.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "279603"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7I/wppVKX1TkrSRvCniNB29nXkV7yhagQkhxjMo/5jE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 13:56:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kgkysuk712"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7I/wppVKX1TkrSRvCniNB29nXkV7yhagQkhxjMo/5jE="
+        },
+        {
+          "Name": "label",
+          "Value": "img/images/9.jpg"
+        }
+      ]
+    },
+    {
       "Route": "img/images/Teacher_imgs/01e03168-1b05-4f42-870e-6eb03133cc95.jnqlt8zhpk.png",
       "AssetFile": "img/images/Teacher_imgs/01e03168-1b05-4f42-870e-6eb03133cc95.png",
       "Selectors": [],

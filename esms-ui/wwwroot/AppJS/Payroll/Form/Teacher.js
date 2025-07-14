@@ -128,7 +128,8 @@ function Onload() {
                     buttons: ["pdf", "copy", "print", "csv"],
                     responsive: true, // Ensures responsiveness
                     columns: [
-                        { render: () => tbl_row_cnt++ },
+                       // { render: () => tbl_row_cnt++ },
+                        { data: null, render: () => tbl_row_cnt++ },
                         {
                             data: 'picture',
                             render: data => `<img src="${data || '/img/images/profile.jpg'}" width="40" height="40" style="object-fit:cover; border-radius:8px;" onerror="this.onerror=null;this.src='/img/images/profile.jpg';" />`

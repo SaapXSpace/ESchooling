@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/50EY8uVPetcCyibf29VV+yw8Q9Nq3SkrISUs88Tbro=",
+  "Hash": "hhYw5Eztt71Pp1a6Dq3fpLvj6R2P+jYjc25/DevcoDc=",
   "Source": "UI",
   "BasePath": "_content/UI",
   "Mode": "Default",
@@ -451,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vncj4fifha",
-      "Integrity": "28bRYm5dOl1XoJ76U8Amke428a5eitLZe2fP60A/wrs=",
+      "Fingerprint": "n7i9xf9y0m",
+      "Integrity": "czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AppJS\\Payroll\\Form\\Teacher.js"
@@ -472,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "572n7riric",
-      "Integrity": "4f10XP57JAQwEK7Lz1oFuSsvJfmr/QMuPC/tl1CusiI=",
+      "Fingerprint": "3l9qn0s87a",
+      "Integrity": "+RXZAQwBI9HzP2kAa+Bazr0Z7qHqaayiPJ6jupqhJl4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AppJS\\Service\\ApiService.js"
@@ -6986,7 +6986,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12891"
+          "Value": "12197"
         },
         {
           "Name": "Content-Type",
@@ -6994,11 +6994,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"28bRYm5dOl1XoJ76U8Amke428a5eitLZe2fP60A/wrs=\""
+          "Value": "\"czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 10:52:47 GMT"
+          "Value": "Mon, 14 Jul 2025 13:53:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7008,12 +7008,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-28bRYm5dOl1XoJ76U8Amke428a5eitLZe2fP60A/wrs="
+          "Value": "sha256-czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY="
         }
       ]
     },
     {
-      "Route": "AppJS/Payroll/Form/Teacher.vncj4fifha.js",
+      "Route": "AppJS/Payroll/Form/Teacher.n7i9xf9y0m.js",
       "AssetFile": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7023,7 +7023,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12891"
+          "Value": "12197"
         },
         {
           "Name": "Content-Type",
@@ -7031,11 +7031,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"28bRYm5dOl1XoJ76U8Amke428a5eitLZe2fP60A/wrs=\""
+          "Value": "\"czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 10:52:47 GMT"
+          "Value": "Mon, 14 Jul 2025 13:53:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7045,7 +7045,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vncj4fifha"
+          "Value": "n7i9xf9y0m"
         },
         {
           "Name": "label",
@@ -7053,12 +7053,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-28bRYm5dOl1XoJ76U8Amke428a5eitLZe2fP60A/wrs="
+          "Value": "sha256-czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY="
         }
       ]
     },
     {
-      "Route": "AppJS/Service/ApiService.572n7riric.js",
+      "Route": "AppJS/Service/ApiService.3l9qn0s87a.js",
       "AssetFile": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Service\\ApiService.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7068,7 +7068,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14709"
+          "Value": "14287"
         },
         {
           "Name": "Content-Type",
@@ -7076,11 +7076,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4f10XP57JAQwEK7Lz1oFuSsvJfmr/QMuPC/tl1CusiI=\""
+          "Value": "\"+RXZAQwBI9HzP2kAa+Bazr0Z7qHqaayiPJ6jupqhJl4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 06:18:24 GMT"
+          "Value": "Mon, 14 Jul 2025 13:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7090,7 +7090,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "572n7riric"
+          "Value": "3l9qn0s87a"
         },
         {
           "Name": "label",
@@ -7098,7 +7098,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4f10XP57JAQwEK7Lz1oFuSsvJfmr/QMuPC/tl1CusiI="
+          "Value": "sha256-+RXZAQwBI9HzP2kAa+Bazr0Z7qHqaayiPJ6jupqhJl4="
         }
       ]
     },
@@ -7113,7 +7113,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14709"
+          "Value": "14287"
         },
         {
           "Name": "Content-Type",
@@ -7121,11 +7121,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4f10XP57JAQwEK7Lz1oFuSsvJfmr/QMuPC/tl1CusiI=\""
+          "Value": "\"+RXZAQwBI9HzP2kAa+Bazr0Z7qHqaayiPJ6jupqhJl4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 06:18:24 GMT"
+          "Value": "Mon, 14 Jul 2025 13:30:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7135,7 +7135,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4f10XP57JAQwEK7Lz1oFuSsvJfmr/QMuPC/tl1CusiI="
+          "Value": "sha256-+RXZAQwBI9HzP2kAa+Bazr0Z7qHqaayiPJ6jupqhJl4="
         }
       ]
     },
@@ -26760,7 +26760,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 10:52:21 GMT"
+          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26805,7 +26805,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 10:52:21 GMT"
+          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26850,7 +26850,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 10:52:21 GMT"
+          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26887,7 +26887,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 10:52:21 GMT"
+          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
         },
         {
           "Name": "Cache-Control",
