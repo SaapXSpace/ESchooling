@@ -456,6 +456,116 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.CourseController",
+    "Method": "AddCourse",
+    "RelativePath": "api/v{version}/Course/AddCourse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Course",
+        "Type": "API.Views.Shared.CourseAddModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CourseController",
+    "Method": "DeleteCourse",
+    "RelativePath": "api/v{version}/Course/DeleteCourse",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CourseController",
+    "Method": "GetCourse",
+    "RelativePath": "api/v{version}/Course/GetCourse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CourseController",
+    "Method": "GetCourseById",
+    "RelativePath": "api/v{version}/Course/GetCourseById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "_Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CourseController",
+    "Method": "UpdateCourse",
+    "RelativePath": "api/v{version}/Course/UpdateCourse",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Course",
+        "Type": "API.Views.Shared.CourseUpdateModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.DashboardServiceController",
     "Method": "GetAdminDashboardCardsCounts",
     "RelativePath": "api/v{version}/DashboardService/GetAdminDashboardCardsCounts",

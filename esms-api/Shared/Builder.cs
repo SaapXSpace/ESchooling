@@ -28,6 +28,9 @@ namespace API.Shared
                 case Enums.ModuleClassName.Department:{
                     return new DepartmentManager(_context);
                 }
+                case Enums.ModuleClassName.Course:{
+                        return new CourseManager(_context);
+                }
                 case Enums.ModuleClassName.UserRole:{
                     return new UserRoleManager(_context);
                 }

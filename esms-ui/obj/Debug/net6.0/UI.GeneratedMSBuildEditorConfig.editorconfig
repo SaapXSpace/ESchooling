@@ -100,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9uaXRvcmluZ1xEYXNoYm9hcmRzXEFjdGl2aXR5RGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Saapx/Projects/ESMS/ESchooling/esms-ui/Pages/Payroll/Form/Course.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5cm9sbFxGb3JtXENvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Saapx/Projects/ESMS/ESchooling/esms-ui/Pages/Payroll/Form/Department.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5cm9sbFxGb3JtXERlcGFydG1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

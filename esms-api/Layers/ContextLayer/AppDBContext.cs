@@ -37,13 +37,14 @@ namespace API.Layers.ContextLayer
         #region PAYROLL
 
             public DbSet<Department> Departments { get; set; }
+            public DbSet<Course> Courses { get; set; }
 
         #endregion
 
         #region ACCOUNTS
 
-            
-            
+
+
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

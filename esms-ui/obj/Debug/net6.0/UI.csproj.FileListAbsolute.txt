@@ -398,12 +398,6 @@ D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\scopedcss\projectbund
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets.build.json
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets.development.json
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets.build.endpoints.json
-D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets\msbuild.UI.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets\msbuild.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets\msbuild.build.UI.props
-D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.UI.props
-D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.UI.props
-D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets.pack.json
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\UI.dll
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\refint\UI.dll
@@ -411,3 +405,8 @@ D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\UI.xml
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\UI.pdb
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\UI.genruntimeconfig.cache
 D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\ref\UI.dll
+D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\rpswa.dswa.cache.json
+D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\rjimswa.dswa.cache.json
+D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
+D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
+D:\Saapx\Projects\ESMS\ESchooling\esms-ui\obj\Debug\net6.0\staticwebassets.build.json.cache
