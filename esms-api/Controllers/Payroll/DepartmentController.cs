@@ -5,7 +5,7 @@ using API.Views.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers;
+namespace API.Controllers.Payroll;
 
 [ApiController]
 [Route("api/v{version:apiVersion}/[controller]")]

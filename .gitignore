@@ -102,3 +102,6 @@ nunit-*.xml
 /esms-api/.vs/API/v17/.futdcache.v2
 /esms-ui/.vs/UI/v17/.futdcache.v2
 /esms-api/bin/Debug/net6.0/appsettings.json
+/esms-api/obj/Debug/net6.0/API.assets.cache
+/esms-api/obj/Debug/net6.0/API.csproj.AssemblyReference.cache
+/esms-api/obj/Debug/net6.0/API.GeneratedMSBuildEditorConfig.editorconfig

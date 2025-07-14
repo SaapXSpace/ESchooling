@@ -131,6 +131,10 @@ namespace API.Shared
             AppDBContext _context = new AppDBContext(options, httpContextAccessor);
 
             ApiResponse apiResponse = new ApiResponse();
+            foreach (var claim in _User.Claims)
+            {
+                Console.WriteLine($"{claim.Type}: {claim.Value}");
+            }
             string _Key = _User.Claims.FirstOrDefault(c => c.Type == Enums.Misc.Key.ToString())?.Value ?? "";
              var _Permission = await (from _UserKey in _context.UserLoginAudits
                                      join _Users in _context.Users on _UserKey.UserId equals _Users.Id

@@ -72,7 +72,7 @@ namespace API.Manager.Payroll.Setup
                 bool _Code = _context.Departments.Any (rec => rec.Code.Trim ().ToLower ().Equals (_model.Code.Trim ().ToLower ()) && rec.Action != Enums.Operations.D.ToString ());
                 bool _NameExists = _context.Departments.Any (rec => rec.Name.Trim ().ToLower ().Equals (_model.Name.Trim ().ToLower ()) && rec.Action != Enums.Operations.D.ToString ());
 
-                if (_Code)
+                  if (_Code)
                 {
                     error = "Applogoies, This Code is Already Generated, Please Regenrate Code";
                     apiResponse.statusCode = StatusCodes.Status409Conflict.ToString ();

@@ -23,194 +23,94 @@ namespace API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("API.Models.AccountHead", b =>
+            modelBuilder.Entity("API.Model.Payroll.Teacher", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("TeacherId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Code")
+                    b.Property<string>("Cnic")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AccountHead");
-                });
-
-            modelBuilder.Entity("API.Models.BankAccount", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Account")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("BankTypeId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Contact")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CurrencyId")
+                    b.Property<Guid>("CreatedBy")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("DeleteDate")
+                    b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeletedBy")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Fax")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("EmploymentStatus")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("IBAN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("InsertDate")
+                    b.Property<DateTime?>("ExitDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ExitReason")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FullName")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<DateTime?>("JoiningDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Phone")
                         .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Picture")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                    b.Property<string>("RegistrationNumber")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UserIdDelete")
+                    b.Property<Guid?>("UpdatedBy")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
+                    b.HasKey("TeacherId");
 
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BankTypeId");
-
-                    b.HasIndex("CurrencyId");
-
-                    b.ToTable("BankAccount");
-                });
-
-            modelBuilder.Entity("API.Models.BankType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BankType");
+                    b.ToTable("Teacher");
                 });
 
             modelBuilder.Entity("API.Models.Branch", b =>
@@ -288,70 +188,6 @@ namespace API.Migrations
                     b.ToTable("Branch");
                 });
 
-            modelBuilder.Entity("API.Models.Certificate", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("CertificateNo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CourseId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ExpiryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("IssueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("Certificates");
-                });
-
             modelBuilder.Entity("API.Models.Company", b =>
                 {
                     b.Property<Guid>("Id")
@@ -416,166 +252,6 @@ namespace API.Migrations
                     b.ToTable("Company");
                 });
 
-            modelBuilder.Entity("API.Models.Course", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CourseCategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Fees")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("ShortName")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseCategoryId");
-
-                    b.ToTable("Courses");
-                });
-
-            modelBuilder.Entity("API.Models.CourseCategory", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CourseCategory");
-                });
-
-            modelBuilder.Entity("API.Models.Currency", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Currency");
-                });
-
             modelBuilder.Entity("API.Models.Department", b =>
                 {
                     b.Property<Guid>("Id")
@@ -623,226 +299,6 @@ namespace API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Department");
-                });
-
-            modelBuilder.Entity("API.Models.DocumentType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("DocumentType");
-                });
-
-            modelBuilder.Entity("API.Models.FeeVoucher", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid?>("ApprovedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("ApprovedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Company")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Discount")
-                        .HasColumnType("float");
-
-                    b.Property<double>("DiscountAmount")
-                        .HasColumnType("float");
-
-                    b.Property<bool>("Due")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Narration")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Request")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Words")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("FeeVoucher");
-                });
-
-            modelBuilder.Entity("API.Models.Ledger", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("Account")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CompanyId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("HeadId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Narration")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Payer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaymentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Recipient")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Transaction")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Words")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
-
-                    b.HasIndex("HeadId");
-
-                    b.ToTable("Ledger");
                 });
 
             modelBuilder.Entity("API.Models.MenuCategory", b =>
@@ -1031,364 +487,6 @@ namespace API.Migrations
                     b.HasIndex("MenuModuleId");
 
                     b.ToTable("MenuSubCategory");
-                });
-
-            modelBuilder.Entity("API.Models.Payment", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("Account")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Narration")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaymentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("VoucherId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Words")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("VoucherId");
-
-                    b.ToTable("Payment");
-                });
-
-            modelBuilder.Entity("API.Models.StudentCourse", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("Certificate")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CourseId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Discount")
-                        .HasColumnType("float");
-
-                    b.Property<double>("DiscountAmount")
-                        .HasColumnType("float");
-
-                    b.Property<string>("EndDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Fees")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("NetFees")
-                        .HasColumnType("float");
-
-                    b.Property<bool>("PayStatus")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid?>("PrintApprovalBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("PrintApprovalDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("PrintStatus")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("StartDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Voucher")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("VoucherId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("VoucheringCompany")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("StudentCourses");
-                });
-
-            modelBuilder.Entity("API.Models.StudentDocument", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("DocumentTypeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<byte[]>("Image")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Remarks")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DocumentTypeId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("StudentDocuments");
-                });
-
-            modelBuilder.Entity("API.Models.StudentProfile", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Active")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("CNIC")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("COC")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("COCHeld")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DateOfBirth")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("FatherName")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<DateTime?>("InsertDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Nationality")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("No")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedName")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Passport")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("PlaceOfBirth")
-                        .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<string>("PostalAddress")
-                        .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<byte[]>("ProfileImage")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("Rank")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("SSB")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasMaxLength(1)
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("UserIdDelete")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdInsert")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserIdUpdate")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("StudentProfile");
                 });
 
             modelBuilder.Entity("API.Models.User", b =>
@@ -1664,25 +762,6 @@ namespace API.Migrations
                     b.ToTable("UsersPermissions");
                 });
 
-            modelBuilder.Entity("API.Models.BankAccount", b =>
-                {
-                    b.HasOne("API.Models.BankType", "BankTypes")
-                        .WithMany()
-                        .HasForeignKey("BankTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("API.Models.Currency", "Currencies")
-                        .WithMany()
-                        .HasForeignKey("CurrencyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("BankTypes");
-
-                    b.Navigation("Currencies");
-                });
-
             modelBuilder.Entity("API.Models.Branch", b =>
                 {
                     b.HasOne("API.Models.Company", "Companies")
@@ -1690,66 +769,6 @@ namespace API.Migrations
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.Navigation("Companies");
-                });
-
-            modelBuilder.Entity("API.Models.Certificate", b =>
-                {
-                    b.HasOne("API.Models.Course", "Courses")
-                        .WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("API.Models.StudentProfile", "Students")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Courses");
-
-                    b.Navigation("Students");
-                });
-
-            modelBuilder.Entity("API.Models.Course", b =>
-                {
-                    b.HasOne("API.Models.CourseCategory", "CourseCategories")
-                        .WithMany()
-                        .HasForeignKey("CourseCategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("CourseCategories");
-                });
-
-            modelBuilder.Entity("API.Models.FeeVoucher", b =>
-                {
-                    b.HasOne("API.Models.StudentProfile", "Students")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Students");
-                });
-
-            modelBuilder.Entity("API.Models.Ledger", b =>
-                {
-                    b.HasOne("API.Models.Company", "Companies")
-                        .WithMany()
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("API.Models.AccountHead", "AccountHeads")
-                        .WithMany()
-                        .HasForeignKey("HeadId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("AccountHeads");
 
                     b.Navigation("Companies");
                 });
@@ -1793,55 +812,6 @@ namespace API.Migrations
                     b.Navigation("MenuCategory");
 
                     b.Navigation("MenuModule");
-                });
-
-            modelBuilder.Entity("API.Models.Payment", b =>
-                {
-                    b.HasOne("API.Models.FeeVoucher", "FeeVouchers")
-                        .WithMany()
-                        .HasForeignKey("VoucherId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("FeeVouchers");
-                });
-
-            modelBuilder.Entity("API.Models.StudentCourse", b =>
-                {
-                    b.HasOne("API.Models.Course", "Courses")
-                        .WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("API.Models.StudentProfile", "Students")
-                        .WithMany("StudentCourses")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Courses");
-
-                    b.Navigation("Students");
-                });
-
-            modelBuilder.Entity("API.Models.StudentDocument", b =>
-                {
-                    b.HasOne("API.Models.DocumentType", "DocumentTypes")
-                        .WithMany()
-                        .HasForeignKey("DocumentTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("API.Models.StudentProfile", "Students")
-                        .WithMany("StudentDocuments")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("DocumentTypes");
-
-                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("API.Models.User", b =>
@@ -1915,13 +885,6 @@ namespace API.Migrations
                     b.Navigation("User");
 
                     b.Navigation("UserRoles");
-                });
-
-            modelBuilder.Entity("API.Models.StudentProfile", b =>
-                {
-                    b.Navigation("StudentCourses");
-
-                    b.Navigation("StudentDocuments");
                 });
 #pragma warning restore 612, 618
         }
