@@ -1,12 +1,224 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\dell\\ESchooling\\esms-api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\model\\payroll\\designation .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:model\\payroll\\designation .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\manager\\payroll\\designationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:manager\\payroll\\designationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\controllers\\payroll\\designationcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\payroll\\designationcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\environment\\register\\serviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:environment\\register\\serviceregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\processor\\payroll\\designationprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:processor\\payroll\\designationprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\views\\payroll\\designationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:views\\payroll\\designationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\shared\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:shared\\builder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\shared\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:shared\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\processor\\payroll\\departmentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:processor\\payroll\\departmentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\model\\payroll\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:model\\payroll\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|c:\\users\\dell\\eschooling\\esms-api\\controllers\\payroll\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\payroll\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceRegister.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Environment\\Register\\ServiceRegister.cs",
+              "RelativeDocumentMoniker": "Environment\\Register\\ServiceRegister.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Environment\\Register\\ServiceRegister.cs",
+              "RelativeToolTip": "Environment\\Register\\ServiceRegister.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wD0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T15:36:36.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Shared\\Enums.cs",
+              "RelativeDocumentMoniker": "Shared\\Enums.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Shared\\Enums.cs",
+              "RelativeToolTip": "Shared\\Enums.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAmwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T15:33:36.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T15:32:13.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Builder.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Shared\\Builder.cs",
+              "RelativeDocumentMoniker": "Shared\\Builder.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Shared\\Builder.cs",
+              "RelativeToolTip": "Shared\\Builder.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T15:30:31.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Model\\Payroll\\Department.cs",
+              "RelativeDocumentMoniker": "Model\\Payroll\\Department.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Model\\Payroll\\Department.cs",
+              "RelativeToolTip": "Model\\Payroll\\Department.cs",
+              "ViewState": "AgIAAA8AAABA/v////8nwBkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T12:16:04.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Controllers\\Payroll\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Payroll\\DepartmentController.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Controllers\\Payroll\\DepartmentController.cs",
+              "RelativeToolTip": "Controllers\\Payroll\\DepartmentController.cs",
+              "ViewState": "AgIAAAUAAAAAMjMzMzMbwBcAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T11:54:50.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Designation .cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Model\\Payroll\\Designation .cs",
+              "RelativeDocumentMoniker": "Model\\Payroll\\Designation .cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Model\\Payroll\\Designation .cs",
+              "RelativeToolTip": "Model\\Payroll\\Designation .cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAA3wCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T11:52:31.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DesignationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Views\\Payroll\\DesignationViewModel.cs",
+              "RelativeDocumentMoniker": "Views\\Payroll\\DesignationViewModel.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Views\\Payroll\\DesignationViewModel.cs",
+              "RelativeToolTip": "Views\\Payroll\\DesignationViewModel.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:47:16.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DesignationManager.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Manager\\Payroll\\DesignationManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Payroll\\DesignationManager.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Manager\\Payroll\\DesignationManager.cs",
+              "RelativeToolTip": "Manager\\Payroll\\DesignationManager.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAQwIIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:20:29.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DesignationController .cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Controllers\\Payroll\\DesignationController .cs",
+              "RelativeDocumentMoniker": "Controllers\\Payroll\\DesignationController .cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Controllers\\Payroll\\DesignationController .cs",
+              "RelativeToolTip": "Controllers\\Payroll\\DesignationController .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:14:05.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DesignationProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Processor\\Payroll\\DesignationProcessor.cs",
+              "RelativeDocumentMoniker": "Processor\\Payroll\\DesignationProcessor.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Processor\\Payroll\\DesignationProcessor.cs",
+              "RelativeToolTip": "Processor\\Payroll\\DesignationProcessor.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAIwHkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:37:37.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DepartmentProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\ESchooling\\esms-api\\Processor\\Payroll\\DepartmentProcessor.cs",
+              "RelativeDocumentMoniker": "Processor\\Payroll\\DepartmentProcessor.cs",
+              "ToolTip": "C:\\Users\\dell\\ESchooling\\esms-api\\Processor\\Payroll\\DepartmentProcessor.cs",
+              "RelativeToolTip": "Processor\\Payroll\\DepartmentProcessor.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T20:08:12.953Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

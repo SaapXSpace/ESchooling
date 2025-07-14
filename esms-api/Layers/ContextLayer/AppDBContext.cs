@@ -14,6 +14,8 @@ namespace API.Layers.ContextLayer
 
         }
         
+
+
         public AppDBContext(DbContextOptions<AppDBContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
         {
             _httpContextAccessor = httpContextAccessor;
@@ -37,13 +39,14 @@ namespace API.Layers.ContextLayer
         #region PAYROLL
 
             public DbSet<Department> Departments { get; set; }
+            public DbSet<Designation> Designations { get; set; }
 
         #endregion
 
         #region ACCOUNTS
 
-            
-            
+
+
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

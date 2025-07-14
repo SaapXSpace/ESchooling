@@ -1,32 +1,33 @@
-
 using API.Models;
 using API.Processor;
 using API.Processor.Admin;
+using API.Processor.Payroll;
 using API.Processor.Payroll.Setup;
 using API.Repository;
 using API.Views.Shared;
 
-namespace API.Environment.Register{
+namespace API.Environment.Register
+{
     public static class ServiceRegister
     {
         public static void ConfigureProcessor(this IServiceCollection services)
         {
             #region CONFIGURATION
-                ConfigureConfigurationProcessor(services);
+            ConfigureConfigurationProcessor(services);
             #endregion
 
             #region ACCOUNTS
-                ConfigureAccountsProcessor(services);
+            ConfigureAccountsProcessor(services);
             #endregion
 
             #region PAYROLL
-                ConfigurePayrollProcessor(services);
+            ConfigurePayrollProcessor(services);
             #endregion
 
             #region SERVICE REPOSITORY
-                ConfigureServiceRepository(services);
+            ConfigureServiceRepository(services);
             #endregion
-            
+
         }
 
         private static void ConfigureConfigurationProcessor(IServiceCollection services)
@@ -38,32 +39,39 @@ namespace API.Environment.Register{
             services.AddScoped<IProcessor<MenuSubCategoryBaseModel>, MenuSubCategoryProcessor>();
             services.AddScoped<IProcessor<UserRoleBaseModel>, UserRoleProcessor>();
             services.AddScoped<IProcessor<UsersBaseModel>, UserProcessor>();
+
+            
+            services.AddScoped<IProcessor<DesignationBaseModel>, DesignationProcessor>();
+            // ---------------------------------------
         }
 
         private static void ConfigurePayrollProcessor(IServiceCollection services)
         {
-             services.AddScoped<IProcessor<DepartmentBaseModel>, DepartmentProcessor>();
+            services.AddScoped<IProcessor<DepartmentBaseModel>, DepartmentProcessor>();
+            services.AddScoped<IProcessor<DesignationBaseModel>, DesignationProcessor>();
         }
+        
 
         private static void ConfigureAccountsProcessor(IServiceCollection services)
         {
-             //services.AddScoped<IProcessor<BankTypeBaseModel>, BankTypeProcessor>();
-             
+            //services.AddScoped<IProcessor<BankTypeBaseModel>, BankTypeProcessor>();
+            // If you uncomment the line above, ensure BankTypeProcessor exists and is in scope.
         }
 
-        
-        public static void ConfigureServiceRepository(IServiceCollection services){
+
+        public static void ConfigureServiceRepository(IServiceCollection services)
+        {
 
             #region ServiceRepository
-            
-                services.AddScoped<IConfigurationServiceRepository, ConfigurationServiceRepository>();
-                services.AddScoped<IAuthServiceRepository, AuthServiceRepository>();
-                services.AddScoped<IVerificationServiceRepository, VerificationServiceRepository>();
-                services.AddScoped<IDashboardServiceRepository, DashboardServiceRepository>();
-                
+
+            services.AddScoped<IConfigurationServiceRepository, ConfigurationServiceRepository>();
+            services.AddScoped<IAuthServiceRepository, AuthServiceRepository>();
+            services.AddScoped<IVerificationServiceRepository, VerificationServiceRepository>();
+            services.AddScoped<IDashboardServiceRepository, DashboardServiceRepository>();
+
             #endregion
-            
+
         }
-        
+
     }
 }

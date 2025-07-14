@@ -28,6 +28,7 @@ namespace API.Shared
             // PAYROLL
 
             Department,
+            Designation,
             
             // ACCOUNTS
             Asset,

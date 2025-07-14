@@ -687,6 +687,116 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.DesignationController",
+    "Method": "AddDesignation",
+    "RelativePath": "api/v{version}/Designation/AddDesignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Designation",
+        "Type": "API.Views.Shared.DesignationAddModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DesignationController",
+    "Method": "DeleteDesignation",
+    "RelativePath": "api/v{version}/Designation/DeleteDesignation",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DesignationController",
+    "Method": "GetDesignation",
+    "RelativePath": "api/v{version}/Designation/GetDesignation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DesignationController",
+    "Method": "GetDesignationById",
+    "RelativePath": "api/v{version}/Designation/GetDesignationById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "_Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.DesignationController",
+    "Method": "UpdateDesignation",
+    "RelativePath": "api/v{version}/Designation/UpdateDesignation",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Designation",
+        "Type": "API.Views.Shared.DesignationUpdateModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.MenuCategoryController",
     "Method": "AddMenuCategory",
     "RelativePath": "api/v{version}/MenuCategory/AddMenuCategory",

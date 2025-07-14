@@ -28,6 +28,10 @@ namespace API.Shared
                 case Enums.ModuleClassName.Department:{
                     return new DepartmentManager(_context);
                 }
+                case Enums.ModuleClassName.Designation:
+                    {
+                        return new DesignationManager(_context);
+                    }
                 case Enums.ModuleClassName.UserRole:{
                     return new UserRoleManager(_context);
                 }
