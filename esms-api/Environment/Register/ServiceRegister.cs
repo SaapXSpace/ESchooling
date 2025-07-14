@@ -43,6 +43,7 @@ namespace API.Environment.Register{
         private static void ConfigurePayrollProcessor(IServiceCollection services)
         {
              services.AddScoped<IProcessor<DepartmentBaseModel>, DepartmentProcessor>();
+            services.AddScoped<IProcessor<ClassroomBaseModel>,ClassroomProcessor>();
         }
 
         private static void ConfigureAccountsProcessor(IServiceCollection services)

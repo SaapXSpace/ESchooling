@@ -1,12 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Backup(Saapx)\\EIMS\\ims-ui\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\payroll\\form\\classroom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\payroll\\form\\classroom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\pages\\payroll\\form\\classroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:pages\\payroll\\form\\classroom.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\pages\\payroll\\form\\department.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:pages\\payroll\\form\\department.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\payroll\\form\\department.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\payroll\\form\\department.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-ui\\wwwroot\\appjs\\service\\apiservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{594A9E84-1A91-4D75-A90E-2C2E8F0E32E3}|UI.csproj|solutionrelative:wwwroot\\appjs\\service\\apiservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Department.cshtml",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Department.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Payroll\\Form\\Department.cshtml",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Department.cshtml",
+              "RelativeToolTip": "Pages\\Payroll\\Form\\Department.cshtml",
+              "ViewState": "AgIAABoAAAAAcDMzMzMLwFkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-11T13:36:59.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApiService.js",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Service\\ApiService.js",
+              "RelativeDocumentMoniker": "wwwroot\\AppJS\\Service\\ApiService.js",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Service\\ApiService.js",
+              "RelativeToolTip": "wwwroot\\AppJS\\Service\\ApiService.js",
+              "ViewState": "AgIAABMAAAAAzszMzMwnwBAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-11T10:22:14.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.js",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Index.js",
+              "RelativeDocumentMoniker": "wwwroot\\AppJS\\Index.js",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Index.js",
+              "RelativeToolTip": "wwwroot\\AppJS\\Index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-09T12:03:26.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Classroom.cshtml",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Classroom.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Payroll\\Form\\Classroom.cshtml",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Classroom.cshtml",
+              "RelativeToolTip": "Pages\\Payroll\\Form\\Classroom.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T12:36:26.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Department.js",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Department.js",
+              "RelativeDocumentMoniker": "wwwroot\\AppJS\\Payroll\\Form\\Department.js",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Department.js",
+              "RelativeToolTip": "wwwroot\\AppJS\\Payroll\\Form\\Department.js",
+              "ViewState": "AgIAABMAAAAAppmZmRkWwGUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-08T11:12:30.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Classroom.js",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Classroom.js",
+              "RelativeDocumentMoniker": "wwwroot\\AppJS\\Payroll\\Form\\Classroom.js",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Classroom.js",
+              "RelativeToolTip": "wwwroot\\AppJS\\Payroll\\Form\\Classroom.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-08T11:12:51.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.js",
+              "DocumentMoniker": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\js\\app.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
+              "ToolTip": "D:\\SaapX\\Projects\\ESMS\\ESchooling\\esms-ui\\wwwroot\\js\\app.js",
+              "RelativeToolTip": "wwwroot\\js\\app.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAD2Dj8AAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-08T11:11:02.17Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -40,6 +40,30 @@ public class ConfigurationLovServiceController : ControllerBase
     }
 
     [HttpGet]
+    [Route("GetClassroomLov")]
+    public async Task<IActionResult> GetClassroomLov(string? search)
+    {
+        try
+        {
+            var result = await IConfigurationServiceRepository.GetClassroomLovAsync(search);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            string innerexp = "";
+            if (e.InnerException != null)
+            {
+                innerexp = " Inner Error : " + e.InnerException.ToString();
+            }
+            return BadRequest(e.Message.ToString() + innerexp);
+        }
+    }
+
+    [HttpGet]
     [Route("GetMenuInitializer")]
     public async Task<IActionResult> GetMenuInitializer(){
         try {

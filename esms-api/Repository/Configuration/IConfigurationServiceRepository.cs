@@ -13,7 +13,8 @@ namespace API.Repository {
     {
         //LOV's
        Task<ApiResponse> GetDepartmentsLovAsync (string? _Search);
-       Task<ApiResponse> GetMenuInitializerAsync (ClaimsPrincipal _User);
+        Task<ApiResponse> GetClassroomLovAsync(string? _Search);
+        Task<ApiResponse> GetMenuInitializerAsync (ClaimsPrincipal _User);
        Task<ApiResponse> GetUserRolesLovAsync (string? _Search, ClaimsPrincipal User);
        Task<ApiResponse> GetCompanyLovAsync (string? _Search);
        Task<ApiResponse> GetBranchLovAsync (string? _Search);
@@ -154,7 +155,56 @@ namespace API.Repository {
             }
         }
 
+        public async Task<ApiResponse> GetClassroomLovAsync(string? _Search)
+        {
+            var apiResponse = new ApiResponse();
+            try
+            {
+                var _classrooms = await (from classroom in _context.Classrooms
+                                         where classroom.DeletedAt == null &&
+                                               classroom.Active == true &&
+                                               (string.IsNullOrEmpty(_Search) ||
+                                               classroom.RoomNumber.Contains(_Search) ||
+                                               classroom.RoomType.Contains(_Search) ||
+                                               classroom.Location.Contains(_Search))
+                                         select new ListOfViewServicesModel
+                                         {
+                                             Id = classroom.Id,
+                                             Name = $"{classroom.RoomNumber} - {classroom.RoomType}",
+                                             
+                                         })
+                                        .OrderBy(o => o.Name)
+                                        .ToListAsync();
 
+                if (_classrooms == null)
+                {
+                    apiResponse.statusCode = StatusCodes.Status404NotFound.ToString();
+                    apiResponse.message = "No classrooms found";
+                    return apiResponse;
+                }
+                if (_classrooms.Count == 0)
+                {
+                    apiResponse.statusCode = StatusCodes.Status404NotFound.ToString();
+                    apiResponse.message = "No classrooms match the search criteria";
+                    return apiResponse;
+                }
+
+                apiResponse.statusCode = StatusCodes.Status200OK.ToString();
+                apiResponse.data = _classrooms;
+                return apiResponse;
+            }
+            catch (Exception e)
+            {
+                string innerexp = "";
+                if (e.InnerException != null)
+                {
+                    innerexp = " Inner Error: " + e.InnerException.ToString();
+                }
+                apiResponse.statusCode = StatusCodes.Status500InternalServerError.ToString();
+                apiResponse.message = "Error retrieving classrooms: " + e.Message + innerexp;
+                return apiResponse;
+            }
+        }
         public async Task<ApiResponse> GetUserRolesLovAsync(string? _Search, ClaimsPrincipal User)
         {
             var apiResponse = new ApiResponse ();

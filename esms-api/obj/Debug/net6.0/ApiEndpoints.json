@@ -110,6 +110,116 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.ClassroomController",
+    "Method": "AddClassroom",
+    "RelativePath": "api/v{version}/Classroom/AddClassroom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Classroom",
+        "Type": "API.Views.Shared.ClassroomAddModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ClassroomController",
+    "Method": "DeleteClassroom",
+    "RelativePath": "api/v{version}/Classroom/DeleteClassroom",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ClassroomController",
+    "Method": "GetClassroomById",
+    "RelativePath": "api/v{version}/Classroom/GetClassroomById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "_Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ClassroomController",
+    "Method": "GetClassrooms",
+    "RelativePath": "api/v{version}/Classroom/GetClassrooms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ClassroomController",
+    "Method": "UpdateClassroom",
+    "RelativePath": "api/v{version}/Classroom/UpdateClassroom",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Classroom",
+        "Type": "API.Views.Shared.ClassroomUpdateModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.CompanyController",
     "Method": "AddCompany",
     "RelativePath": "api/v{version}/Company/AddCompany",
@@ -229,6 +339,27 @@
     "Parameters": [
       {
         "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ConfigurationLovServiceController",
+    "Method": "GetClassroomLov",
+    "RelativePath": "api/v{version}/ConfigurationLovService/GetClassroomLov",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
         "Type": "System.String",
         "IsRequired": false
       },
