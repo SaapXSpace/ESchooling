@@ -15,7 +15,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Payroll\NewFolder\" />
+    <Folder Include="Pages\Student\" />
     <Folder Include="wwwroot\AppJS\Accounts\Form\" />
+    <Folder Include="wwwroot\AppJS\Student\Form\" />
   </ItemGroup>
 
 </Project>

@@ -69,7 +69,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AccountHead");
+                    b.ToTable("AccountHead", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.BankAccount", b =>
@@ -161,7 +161,7 @@ namespace API.Migrations
 
                     b.HasIndex("CurrencyId");
 
-                    b.ToTable("BankAccount");
+                    b.ToTable("BankAccount", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.BankType", b =>
@@ -210,7 +210,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BankType");
+                    b.ToTable("BankType", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Branch", b =>
@@ -285,7 +285,7 @@ namespace API.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("Branch");
+                    b.ToTable("Branch", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Certificate", b =>
@@ -349,7 +349,7 @@ namespace API.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Certificates");
+                    b.ToTable("Certificates", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Company", b =>
@@ -413,7 +413,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Company");
+                    b.ToTable("Company", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Course", b =>
@@ -475,7 +475,7 @@ namespace API.Migrations
 
                     b.HasIndex("CourseCategoryId");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.CourseCategory", b =>
@@ -524,7 +524,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CourseCategory");
+                    b.ToTable("CourseCategory", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Currency", b =>
@@ -573,7 +573,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Currency");
+                    b.ToTable("Currency", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Department", b =>
@@ -622,7 +622,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Department");
+                    b.ToTable("Department", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.DocumentType", b =>
@@ -671,7 +671,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DocumentType");
+                    b.ToTable("DocumentType", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.FeeVoucher", b =>
@@ -757,7 +757,7 @@ namespace API.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("FeeVoucher");
+                    b.ToTable("FeeVoucher", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Ledger", b =>
@@ -842,7 +842,7 @@ namespace API.Migrations
 
                     b.HasIndex("HeadId");
 
-                    b.ToTable("Ledger");
+                    b.ToTable("Ledger", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.MenuCategory", b =>
@@ -900,7 +900,7 @@ namespace API.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("MenuCategory");
+                    b.ToTable("MenuCategory", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.MenuModule", b =>
@@ -958,7 +958,7 @@ namespace API.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("MenuModule");
+                    b.ToTable("MenuModule", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.MenuSubCategory", b =>
@@ -1030,7 +1030,7 @@ namespace API.Migrations
 
                     b.HasIndex("MenuModuleId");
 
-                    b.ToTable("MenuSubCategory");
+                    b.ToTable("MenuSubCategory", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.Payment", b =>
@@ -1097,7 +1097,7 @@ namespace API.Migrations
 
                     b.HasIndex("VoucherId");
 
-                    b.ToTable("Payment");
+                    b.ToTable("Payment", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.StudentCourse", b =>
@@ -1199,7 +1199,7 @@ namespace API.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("StudentCourses");
+                    b.ToTable("StudentCourses", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.StudentDocument", b =>
@@ -1258,7 +1258,7 @@ namespace API.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("StudentDocuments");
+                    b.ToTable("StudentDocuments", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.StudentProfile", b =>
@@ -1388,7 +1388,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("StudentProfile");
+                    b.ToTable("StudentProfile", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.User", b =>
@@ -1480,7 +1480,7 @@ namespace API.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.UserLoginAudit", b =>
@@ -1531,7 +1531,7 @@ namespace API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserLoginAudit");
+                    b.ToTable("UserLoginAudit", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.UserRole", b =>
@@ -1580,7 +1580,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserRole");
+                    b.ToTable("UserRole", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.UsersPermissions", b =>
@@ -1661,7 +1661,7 @@ namespace API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UsersPermissions");
+                    b.ToTable("UsersPermissions", (string)null);
                 });
 
             modelBuilder.Entity("API.Models.BankAccount", b =>

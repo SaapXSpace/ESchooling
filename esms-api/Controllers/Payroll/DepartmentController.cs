@@ -16,7 +16,7 @@ public class DepartmentController : ControllerBase
     private readonly IProcessor<DepartmentBaseModel> _IProcessor;
     public DepartmentController(IProcessor<DepartmentBaseModel> IProcessor)
     {
-        _IProcessor = IProcessor;
+        _IProcessor = IProcessor;   
     }
 
     [HttpGet]

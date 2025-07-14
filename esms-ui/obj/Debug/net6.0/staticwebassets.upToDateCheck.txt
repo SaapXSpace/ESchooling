@@ -13,10 +13,10 @@ wwwroot\AppJS\Configuration\Form\UserRole.js
 wwwroot\AppJS\Configuration\Form\UsersPermissions.js
 wwwroot\AppJS\Dashboard\Analytics.js
 wwwroot\AppJS\Dashboard\Dashboards\AdminDashboard.js
-wwwroot\AppJS\Dashboard\E-Commerce.js
 wwwroot\AppJS\Index.js
 wwwroot\AppJS\Monitoring\Dashboards\ActivityDashboard.js
 wwwroot\AppJS\Payroll\Form\Department.js
+wwwroot\AppJS\Payroll\Form\Student.js
 wwwroot\AppJS\Service\ApiService.js
 wwwroot\AppJS\Service\Security.js
 wwwroot\AppJS\Service\tab.js
@@ -184,6 +184,7 @@ wwwroot\img\certificate\line_border.png
 wwwroot\img\certificate\line_border_old.png
 wwwroot\img\certificate\line_border-4.png
 wwwroot\img\certificate\line_borderold.png
+wwwroot\img\icons\upload-photo.png
 wwwroot\img\images\profile.jpg
 wwwroot\img\images\scan-qr.jpg
 wwwroot\img\images\upload-qr.jpg

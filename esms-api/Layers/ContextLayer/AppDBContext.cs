@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+
 using API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,13 +38,14 @@ namespace API.Layers.ContextLayer
         #region PAYROLL
 
             public DbSet<Department> Departments { get; set; }
+            public DbSet<Student> Students { get; set; }
 
         #endregion
 
         #region ACCOUNTS
 
-            
-            
+
+
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

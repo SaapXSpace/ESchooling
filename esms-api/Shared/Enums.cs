@@ -28,6 +28,7 @@ namespace API.Shared
             // PAYROLL
 
             Department,
+            Student,
             
             // ACCOUNTS
             Asset,

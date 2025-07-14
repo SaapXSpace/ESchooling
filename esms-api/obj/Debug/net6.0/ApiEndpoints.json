@@ -1017,6 +1017,116 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.StudentController",
+    "Method": "AddStudent",
+    "RelativePath": "api/v{version}/Student/AddStudent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Student",
+        "Type": "API.Views.Shared.StudentAddModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.StudentController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/v{version}/Student/DeleteStudent",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.StudentController",
+    "Method": "GetStudent",
+    "RelativePath": "api/v{version}/Student/GetStudent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.StudentController",
+    "Method": "GetStudentById",
+    "RelativePath": "api/v{version}/Student/GetStudentById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_MenuId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "_Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.StudentController",
+    "Method": "UpdateStudent",
+    "RelativePath": "api/v{version}/Student/UpdateStudent",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Student",
+        "Type": "API.Views.Shared.StudentUpdateModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.UserRolesController",
     "Method": "AddUserRole",
     "RelativePath": "api/v{version}/UserRoles/AddUserRole",

@@ -1,18 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\",
+  "WorkspaceRootPath": "D:\\ESchooling\\esms-api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-api\\controllers\\payroll\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\payroll\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\manager\\payroll\\studentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:manager\\payroll\\studentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-api\\repository\\auth\\iauthservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:repository\\auth\\iauthservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\manager\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:manager\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\projects\\esms\\eschooling\\esms-api\\controllers\\auth\\authservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\auth\\authservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\manager\\payroll\\departmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:manager\\payroll\\departmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\views\\payroll\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:views\\payroll\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\model\\payroll\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:model\\payroll\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\controllers\\payroll\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\payroll\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\eschooling\\esms-api\\processor\\payroll\\studentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:processor\\payroll\\studentprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +42,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IAuthServiceRepository.cs",
-              "DocumentMoniker": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Repository\\Auth\\IAuthServiceRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Auth\\IAuthServiceRepository.cs",
-              "ToolTip": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Repository\\Auth\\IAuthServiceRepository.cs",
-              "RelativeToolTip": "Repository\\Auth\\IAuthServiceRepository.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAvwCoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T15:59:55.488Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthServiceController.cs",
-              "DocumentMoniker": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Auth\\AuthServiceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Auth\\AuthServiceController.cs",
-              "ToolTip": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Auth\\AuthServiceController.cs",
-              "RelativeToolTip": "Controllers\\Auth\\AuthServiceController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAgwCIAAABAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAoAAAAgm5mZmRkmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T15:59:44.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T15:31:44.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IManager.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Manager\\IManager.cs",
+              "RelativeDocumentMoniker": "Manager\\IManager.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Manager\\IManager.cs",
+              "RelativeToolTip": "Manager\\IManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T15:04:18.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentManager.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Manager\\Payroll\\DepartmentManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Payroll\\DepartmentManager.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Manager\\Payroll\\DepartmentManager.cs",
+              "RelativeToolTip": "Manager\\Payroll\\DepartmentManager.cs",
+              "ViewState": "AgIAAHYAAAAAODMzMzMgwH0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T12:04:00.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Model\\Payroll\\Student.cs",
+              "RelativeDocumentMoniker": "Model\\Payroll\\Student.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Model\\Payroll\\Student.cs",
+              "RelativeToolTip": "Model\\Payroll\\Student.cs",
+              "ViewState": "AgIAAB4AAAAAYGZmZmYgwDAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:58:10.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentViewModel.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Views\\Payroll\\StudentViewModel.cs",
+              "RelativeDocumentMoniker": "Views\\Payroll\\StudentViewModel.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Views\\Payroll\\StudentViewModel.cs",
+              "RelativeToolTip": "Views\\Payroll\\StudentViewModel.cs",
+              "ViewState": "AgIAAB8AAAAAMzMzMzMpwBUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:55:34.395Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Payroll\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Payroll\\DepartmentController.cs",
-              "ToolTip": "D:\\Saapx\\Projects\\ESMS\\ESchooling\\esms-api\\Controllers\\Payroll\\DepartmentController.cs",
-              "RelativeToolTip": "Controllers\\Payroll\\DepartmentController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAArwBgAAAAMAAAAAAAAAA==",
+              "Title": "StudentManager.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Manager\\Payroll\\StudentManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Payroll\\StudentManager.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Manager\\Payroll\\StudentManager.cs",
+              "RelativeToolTip": "Manager\\Payroll\\StudentManager.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAqwKAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T15:56:44.906Z",
+              "WhenOpened": "2025-07-09T15:58:03.316Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Controllers\\Payroll\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Payroll\\StudentController.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Controllers\\Payroll\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\Payroll\\StudentController.cs",
+              "ViewState": "AgIAAAwAAAAAgJqZmZnJvxsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:56:21.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentProcessor.cs",
+              "DocumentMoniker": "D:\\ESchooling\\esms-api\\Processor\\Payroll\\StudentProcessor.cs",
+              "RelativeDocumentMoniker": "Processor\\Payroll\\StudentProcessor.cs",
+              "ToolTip": "D:\\ESchooling\\esms-api\\Processor\\Payroll\\StudentProcessor.cs",
+              "RelativeToolTip": "Processor\\Payroll\\StudentProcessor.cs",
+              "ViewState": "AgIAAAQAAAAAZmZmZmYkwBYAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:59:22.219Z"
             }
           ]
         }
