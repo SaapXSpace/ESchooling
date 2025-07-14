@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:controllers\\payroll\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\esms\\eschooling\\esms-api\\layers\\contextlayer\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:layers\\contextlayer\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\esms\\eschooling\\esms-api\\model\\payroll\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:model\\payroll\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\esms\\eschooling\\esms-api\\views\\payroll\\teacherviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:views\\payroll\\teacherviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\esms\\eschooling\\esms-api\\manager\\payroll\\teachermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:manager\\payroll\\teachermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\esms\\eschooling\\esms-api\\processor\\payroll\\teacherprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:processor\\payroll\\teacherprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Migrations\\20250714060126_NewUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250714060126_NewUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|d:\\saapx\\esms\\eschooling\\esms-api\\manager\\payroll\\departmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE3D032-7759-47D6-A74C-AA0CAC307BB3}|API.csproj|solutionrelative:manager\\payroll\\departmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +38,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250714060126_NewUpdate.cs",
+              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Migrations\\20250714060126_NewUpdate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250714060126_NewUpdate.cs",
+              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Migrations\\20250714060126_NewUpdate.cs",
+              "RelativeToolTip": "Migrations\\20250714060126_NewUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T06:01:26.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DepartmentManager.cs",
+              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Manager\\Payroll\\DepartmentManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Payroll\\DepartmentManager.cs",
+              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Manager\\Payroll\\DepartmentManager.cs",
+              "RelativeToolTip": "Manager\\Payroll\\DepartmentManager.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAEoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T21:52:31.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TeacherViewModel.cs",
+              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Views\\Payroll\\TeacherViewModel.cs",
+              "RelativeDocumentMoniker": "Views\\Payroll\\TeacherViewModel.cs",
+              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Views\\Payroll\\TeacherViewModel.cs",
+              "RelativeToolTip": "Views\\Payroll\\TeacherViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAACkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T12:27:04.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TeacherManager.cs",
+              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Manager\\Payroll\\TeacherManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Payroll\\TeacherManager.cs",
+              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Manager\\Payroll\\TeacherManager.cs",
+              "RelativeToolTip": "Manager\\Payroll\\TeacherManager.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAAKQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T05:47:42.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TeacherProcessor.cs",
+              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Processor\\Payroll\\TeacherProcessor.cs",
+              "RelativeDocumentMoniker": "Processor\\Payroll\\TeacherProcessor.cs",
+              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Processor\\Payroll\\TeacherProcessor.cs",
+              "RelativeToolTip": "Processor\\Payroll\\TeacherProcessor.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T12:45:54.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Model\\Payroll\\Teacher.cs",
+              "RelativeDocumentMoniker": "Model\\Payroll\\Teacher.cs",
+              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Model\\Payroll\\Teacher.cs",
+              "RelativeToolTip": "Model\\Payroll\\Teacher.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T12:51:30.327Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,22 +125,9 @@
               "RelativeDocumentMoniker": "Controllers\\Payroll\\TeacherController.cs",
               "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Controllers\\Payroll\\TeacherController.cs",
               "RelativeToolTip": "Controllers\\Payroll\\TeacherController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAgwJoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T15:32:56.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppDBContext.cs",
-              "DocumentMoniker": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Layers\\ContextLayer\\AppDBContext.cs",
-              "RelativeDocumentMoniker": "Layers\\ContextLayer\\AppDBContext.cs",
-              "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-api\\Layers\\ContextLayer\\AppDBContext.cs",
-              "RelativeToolTip": "Layers\\ContextLayer\\AppDBContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T09:25:07.751Z",
               "EditorCaption": ""
             }
           ]

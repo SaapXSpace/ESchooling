@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Security.Claims;
 using API.Layers.ContextLayer;
-using API.Model.Payroll;
-using API.Models;
-using API.Shared;
+using API.Model.Payroll; // Assuming this is where your Teacher entity is defined
+using API.Models; // Assuming ApiResponse, TeacherBaseModel, TeacherAddModel, TeacherUpdateModel are here
+using API.Shared; // Assuming Enums and StatusCodes are here
+using API.Views.Payroll; // Assuming TeacherAddModel, TeacherUpdateModel are here
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Manager.Payroll
@@ -11,10 +12,12 @@ namespace API.Manager.Payroll
     public class TeacherManager : IManager
     {
         private readonly AppDBContext _context;
+
         public TeacherManager(AppDBContext context)
         {
             _context = context;
         }
+
         public async Task<ApiResponse> GetDataAsync(ClaimsPrincipal _User)
         {
             var apiResponse = new ApiResponse();
@@ -44,6 +47,7 @@ namespace API.Manager.Payroll
                 return apiResponse;
             }
         }
+
         public async Task<ApiResponse> GetDataByIdAsync(Guid _Id, ClaimsPrincipal _User)
         {
             var apiResponse = new ApiResponse();
@@ -51,6 +55,7 @@ namespace API.Manager.Payroll
             {
                 var _Table = await _context.Teachers
                     .Where(a => a.TeacherId == _Id && a.Action != Enums.Operations.D.ToString()).FirstOrDefaultAsync();
+                // Console.WriteLine("table data" + _Table.TeacherId); // Consider removing or using proper logging
 
                 if (_Table == null)
                 {
@@ -76,12 +81,26 @@ namespace API.Manager.Payroll
             var apiResponse = new ApiResponse();
             try
             {
-                var _UserId = _User.Claims.FirstOrDefault(c => c.Type == Enums.Misc.UserId.ToString())?.Value.ToString();
-                var _model = (Teacher)model;
+                var _UserId = _User.Claims.FirstOrDefault(c => c.Type == Enums.Misc.UserId.ToString())?.Value;
 
-                string error = "";
-                bool emailExists = _context.Teachers.Any(t => t.Email.Trim().ToLower() == _model.Email.Trim().ToLower() && t.Action != Enums.Operations.D.ToString());
-                bool cnicExists = _context.Teachers.Any(t => t.CNIC.Trim() == _model.CNIC.Trim() && t.Action != Enums.Operations.D.ToString());
+                var addModel = model as TeacherAddModel; // Cast to specific AddModel
+                if (addModel == null)
+                {
+                    apiResponse.statusCode = StatusCodes.Status405MethodNotAllowed.ToString();
+                    apiResponse.message = "Invalid Class: Expected TeacherAddModel.";
+                    return apiResponse;
+                }
+
+                if (!Guid.TryParse(_UserId, out Guid parsedUserId))
+                {
+                    apiResponse.statusCode = StatusCodes.Status400BadRequest.ToString();
+                    apiResponse.message = "Invalid User ID";
+                    return apiResponse;
+                }
+
+                bool emailExists = await _context.Teachers.AnyAsync(t =>
+                    t.Email.Trim().ToLower() == addModel.Email.Trim().ToLower() &&
+                    t.Action != Enums.Operations.D.ToString());
 
                 if (emailExists)
                 {
@@ -90,6 +109,10 @@ namespace API.Manager.Payroll
                     return apiResponse;
                 }
 
+                bool cnicExists = await _context.Teachers.AnyAsync(t =>
+                    t.Cnic.Trim() == addModel.Cnic.Trim() &&
+                    t.Action != Enums.Operations.D.ToString());
+
                 if (cnicExists)
                 {
                     apiResponse.statusCode = StatusCodes.Status409Conflict.ToString();
@@ -97,27 +120,45 @@ namespace API.Manager.Payroll
                     return apiResponse;
                 }
 
-                _model.CreatedBy = Guid.Parse(_UserId);
-                _model.CreatedAt = DateTime.Now;
-                _model.Action = Enums.Operations.A.ToString(); 
+                var teacher = new Teacher
+                {
+                    TeacherId = Guid.NewGuid(),
+                    FullName = addModel.FullName,
+                    Code = addModel.Code, // Assuming Code is passed from frontend or generated earlier in Processor
+                    Email = addModel.Email,
+                    Phone = addModel.Phone,
+                    Cnic = addModel.Cnic,
+                    Gender = addModel.Gender,
+                    DateOfBirth = addModel.DateOfBirth,
+                    JoiningDate = addModel.JoiningDate,
+                    Active = addModel.Active,
+                    EmploymentStatus = addModel.EmploymentStatus,
+                    ExitDate = addModel.ExitDate,
+                    ExitReason = addModel.ExitReason,
+                    // Handle Picture: Use provided URL or a default if null/empty
+                    Picture = string.IsNullOrWhiteSpace(addModel.Picture) ? "/img/images/profile.jpg" : addModel.Picture,
+                    CreatedBy = parsedUserId,
+                    CreatedAt = DateTime.Now,
+                    Action = Enums.Operations.A.ToString()
+                };
 
-                await _context.Teachers.AddAsync(_model);
-                _context.SaveChanges();
+                await _context.Teachers.AddAsync(teacher);
+                await _context.SaveChangesAsync();
 
                 apiResponse.statusCode = StatusCodes.Status200OK.ToString();
-                apiResponse.message = "Teacher added successfully: " + _model.FullName;
+                apiResponse.message = "Teacher added successfully: " + teacher.FullName;
                 return apiResponse;
             }
-            catch (DbUpdateException _exceptionDb)
+            catch (DbUpdateException dbEx)
             {
-                string innerexp = _exceptionDb.InnerException == null ? _exceptionDb.Message : _exceptionDb.Message + " Inner Error: " + _exceptionDb.InnerException.ToString();
+                string innerexp = dbEx.InnerException == null ? dbEx.Message : dbEx.Message + " Inner Error: " + dbEx.InnerException.ToString();
                 apiResponse.statusCode = StatusCodes.Status405MethodNotAllowed.ToString();
                 apiResponse.message = innerexp;
                 return apiResponse;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                string innerexp = e.InnerException == null ? e.Message : e.Message + " Inner Error: " + e.InnerException.ToString();
+                string innerexp = ex.InnerException == null ? ex.Message : ex.Message + " Inner Error: " + ex.InnerException.ToString();
                 apiResponse.statusCode = StatusCodes.Status405MethodNotAllowed.ToString();
                 apiResponse.message = innerexp;
                 return apiResponse;
@@ -130,10 +171,17 @@ namespace API.Manager.Payroll
             try
             {
                 var _UserId = _User.Claims.FirstOrDefault(c => c.Type == Enums.Misc.UserId.ToString())?.Value.ToString();
-                var _model = (Teacher)model;
 
-                bool emailExists = _context.Teachers.Any(t => t.Email == _model.Email && t.TeacherId != _model.TeacherId && t.Action != Enums.Operations.D.ToString());
-                bool cnicExists = _context.Teachers.Any(t => t.CNIC == _model.CNIC && t.TeacherId != _model.TeacherId && t.Action != Enums.Operations.D.ToString());
+                var updateModel = model as TeacherUpdateModel; // Cast to specific UpdateModel
+                if (updateModel == null)
+                {
+                    apiResponse.statusCode = StatusCodes.Status405MethodNotAllowed.ToString();
+                    apiResponse.message = "Invalid Class: Expected TeacherUpdateModel.";
+                    return apiResponse;
+                }
+
+                bool emailExists = _context.Teachers.Any(t => t.Email == updateModel.Email && t.TeacherId != updateModel.TeacherId && t.Action != Enums.Operations.D.ToString());
+                bool cnicExists = _context.Teachers.Any(t => t.Cnic == updateModel.Cnic && t.TeacherId != updateModel.TeacherId && t.Action != Enums.Operations.D.ToString());
 
                 if (emailExists)
                 {
@@ -149,7 +197,7 @@ namespace API.Manager.Payroll
                     return apiResponse;
                 }
 
-                var result = _context.Teachers.FirstOrDefault(t => t.TeacherId == _model.TeacherId && t.Action != Enums.Operations.D.ToString());
+                var result = await _context.Teachers.FirstOrDefaultAsync(t => t.TeacherId == updateModel.TeacherId && t.Action != Enums.Operations.D.ToString());
                 if (result == null)
                 {
                     apiResponse.statusCode = StatusCodes.Status404NotFound.ToString();
@@ -157,23 +205,34 @@ namespace API.Manager.Payroll
                     return apiResponse;
                 }
 
-                // Update values
-                result.FullName = _model.FullName;
-                result.Email = _model.Email;
-                result.Phone = _model.Phone;
-                result.CNIC = _model.CNIC;
-                result.Gender = _model.Gender;
-                result.DateOfBirth = _model.DateOfBirth;
-                result.JoiningDate = _model.JoiningDate;
-                result.EmploymentStatus = _model.EmploymentStatus;
-                result.ExitDate = _model.ExitDate;
-                result.ExitReason = _model.ExitReason;
-                result.Picture = _model.Picture;
-                result.Active = _model.Active;
+                // Update values from the updateModel DTO
+                result.FullName = updateModel.FullName;
+                result.Code = updateModel.Code; // Ensure Code is updated
+                result.Email = updateModel.Email;
+                result.Phone = updateModel.Phone;
+                result.Cnic = updateModel.Cnic;
+                result.Gender = updateModel.Gender;
+                result.DateOfBirth = updateModel.DateOfBirth;
+                result.JoiningDate = updateModel.JoiningDate;
+                result.EmploymentStatus = updateModel.EmploymentStatus;
+                result.ExitDate = updateModel.ExitDate;
+                result.ExitReason = updateModel.ExitReason;
+                // Handle Picture: Use provided URL or a default if null/empty
+                result.Picture = string.IsNullOrWhiteSpace(updateModel.Picture) ? "/img/images/profile.jpg" : updateModel.Picture;
+                result.Active = updateModel.Active;
 
-                result.UpdatedBy = Guid.Parse(_UserId);
+                if (Guid.TryParse(_UserId, out Guid parsedUserId))
+                {
+                    result.UpdatedBy = parsedUserId;
+                }
+                else
+                {
+                    // Handle case where UserId is not a valid GUID (e.g., log error, assign default)
+                    // For now, it will use the default value of Guid? UpdatedBy if it's nullable
+                    // or throw an error if it's non-nullable and not set.
+                }
                 result.UpdatedAt = DateTime.Now;
-                result.Action = Enums.Operations.E.ToString(); 
+                result.Action = Enums.Operations.E.ToString();
 
                 await _context.SaveChangesAsync();
 
@@ -196,6 +255,7 @@ namespace API.Manager.Payroll
                 return apiResponse;
             }
         }
+
         public async Task<ApiResponse> DeleteAsync(Guid _Id, ClaimsPrincipal _User)
         {
             var apiResponse = new ApiResponse();
@@ -203,9 +263,9 @@ namespace API.Manager.Payroll
             {
                 var _UserId = _User.Claims.FirstOrDefault(c => c.Type == Enums.Misc.UserId.ToString())?.Value.ToString();
 
-                var result = _context.Teachers
+                var result = await _context.Teachers
                     .Where(t => t.TeacherId == _Id && t.Action != Enums.Operations.D.ToString())
-                    .FirstOrDefault();
+                    .FirstOrDefaultAsync();
 
                 if (result == null)
                 {
@@ -214,8 +274,15 @@ namespace API.Manager.Payroll
                     return apiResponse;
                 }
 
-                result.DeletedBy = Guid.Parse(_UserId);
-                result.Action = Enums.Operations.D.ToString(); 
+                if (Guid.TryParse(_UserId, out Guid parsedUserId))
+                {
+                    result.DeletedBy = parsedUserId;
+                }
+                else
+                {
+                    // Handle case where UserId is not a valid GUID
+                }
+                result.Action = Enums.Operations.D.ToString();
                 result.DeletedAt = DateTime.Now;
 
                 await _context.SaveChangesAsync();
@@ -239,7 +306,5 @@ namespace API.Manager.Payroll
                 return apiResponse;
             }
         }
-
-
     }
 }

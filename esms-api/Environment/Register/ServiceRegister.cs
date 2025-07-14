@@ -2,8 +2,10 @@
 using API.Models;
 using API.Processor;
 using API.Processor.Admin;
+using API.Processor.Payroll;
 using API.Processor.Payroll.Setup;
 using API.Repository;
+using API.Views.Payroll;
 using API.Views.Shared;
 
 namespace API.Environment.Register{
@@ -43,6 +45,9 @@ namespace API.Environment.Register{
         private static void ConfigurePayrollProcessor(IServiceCollection services)
         {
              services.AddScoped<IProcessor<DepartmentBaseModel>, DepartmentProcessor>();
+          services.AddScoped<IProcessor<TeacherBaseModel>, TeacherProcessor>();
+
+
         }
 
         private static void ConfigureAccountsProcessor(IServiceCollection services)

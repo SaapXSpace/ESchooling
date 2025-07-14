@@ -5,8 +5,18 @@ using API.Views.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using API.Views.Payroll;
+using System.IO; // Required for Path, FileStream
+using System; // Required for Convert.FromBase64String
+using Microsoft.AspNetCore.Hosting; // Required for IWebHostEnvironment
 
 namespace API.Controllers;
+
+// DTO for incoming Base64 image upload request
+public class ImageUploadRequest
+{
+    public string Base64Image { get; set; }
+    public string RegNo { get; set; } // The registration number for naming the file
+}
 
 [ApiController]
 [Route("api/v{version:apiVersion}/[controller]")]
@@ -15,9 +25,12 @@ namespace API.Controllers;
 public class TeacherController : ControllerBase
 {
     private readonly IProcessor<TeacherBaseModel> _IProcessor;
-    public TeacherController(IProcessor<TeacherBaseModel> IProcessor)
+    private readonly IWebHostEnvironment _hostingEnvironment; // To get wwwroot path
+
+    public TeacherController(IProcessor<TeacherBaseModel> IProcessor, IWebHostEnvironment hostingEnvironment)
     {
         _IProcessor = IProcessor;
+        _hostingEnvironment = hostingEnvironment;
     }
 
     [HttpGet]
@@ -60,10 +73,9 @@ public class TeacherController : ControllerBase
         }
     }
 
-
     [HttpPost]
     [Route("AddTeacher")]
-    public async Task<ActionResult> AddTeacher(TeacherAddModel Teacher)
+    public async Task<ActionResult> AddTeacher([FromBody] TeacherAddModel Teacher)
     {
         try
         {
@@ -83,13 +95,12 @@ public class TeacherController : ControllerBase
 
     [HttpPut]
     [Route("UpdateTeacher")]
-    public async Task<ActionResult> UpdateTeacher(TeacherUpdateModel Teacher)
+    public async Task<ActionResult> UpdateTeacher([FromBody] TeacherUpdateModel Teacher)
     {
         try
         {
             var result = await _IProcessor.ProcessPut(Teacher, User);
             return Ok(result);
-
         }
         catch (Exception e)
         {
@@ -122,4 +133,60 @@ public class TeacherController : ControllerBase
         }
     }
 
+    [HttpPost("UploadPicture")]
+    public async Task<IActionResult> UploadPicture([FromBody] ImageUploadRequest request)
+    {
+        if (request == null || string.IsNullOrWhiteSpace(request.Base64Image) || string.IsNullOrWhiteSpace(request.RegNo))
+        {
+            return BadRequest(new { message = "Invalid upload request. Base64 image and registration number are required." });
+        }
+
+        // Validate RegNo format if necessary (e.g., must be numeric)
+        // Example: if (!int.TryParse(request.RegNo, out _)) { return BadRequest("Invalid Registration Number format."); }
+
+        try
+        {
+            // Convert Base64 string to byte array
+            byte[] imageBytes = Convert.FromBase64String(request.Base64Image);
+
+            // Define the target folder: wwwroot/img/images/Teacher_imgs/
+            string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "images"); // FIXED: Updated folder path
+
+            // Create the directory if it doesn't exist
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            // Define the filename: regNo.jpg
+            string fileName = $"{request.RegNo}.jpg";
+            string filePath = Path.Combine(uploadsFolder, fileName);
+
+            // Basic check for JPG format (by checking first few bytes - magic number)
+            // This is a more robust check than just file extension
+            // JPEG magic number starts with FF D8 FF
+            if (imageBytes.Length < 3 || !(imageBytes[0] == 0xFF && imageBytes[1] == 0xD8 && imageBytes[2] == 0xFF))
+            {
+                // If not a JPG, return an error. You could also try to convert it here
+                return BadRequest(new { message = "Only JPG images are allowed." });
+            }
+
+            // Save the file to the server
+            await System.IO.File.WriteAllBytesAsync(filePath, imageBytes);
+
+            // Construct the URL that the frontend will use to access the image
+            string url = $"/img/images/{fileName}"; // FIXED: Updated URL path
+            return Ok(new { url });
+        }
+        catch (FormatException)
+        {
+            return BadRequest(new { message = "Invalid Base64 string." });
+        }
+        catch (Exception ex)
+        {
+            // Log the exception for debugging purposes
+            Console.WriteLine($"Error uploading picture: {ex.Message}");
+            return StatusCode(500, new { message = $"An error occurred while uploading the picture: {ex.Message}" });
+        }
+    }
 }

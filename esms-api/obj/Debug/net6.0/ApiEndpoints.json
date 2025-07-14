@@ -577,7 +577,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "API.Controllers.DepartmentController",
+    "ContainingType": "API.Controllers.Payroll.DepartmentController",
     "Method": "AddDepartment",
     "RelativePath": "api/v{version}/Department/AddDepartment",
     "HttpMethod": "POST",
@@ -598,7 +598,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "API.Controllers.DepartmentController",
+    "ContainingType": "API.Controllers.Payroll.DepartmentController",
     "Method": "DeleteDepartment",
     "RelativePath": "api/v{version}/Department/DeleteDepartment",
     "HttpMethod": "DELETE",
@@ -619,7 +619,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "API.Controllers.DepartmentController",
+    "ContainingType": "API.Controllers.Payroll.DepartmentController",
     "Method": "GetDepartment",
     "RelativePath": "api/v{version}/Department/GetDepartment",
     "HttpMethod": "GET",
@@ -640,7 +640,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "API.Controllers.DepartmentController",
+    "ContainingType": "API.Controllers.Payroll.DepartmentController",
     "Method": "GetDepartmentById",
     "RelativePath": "api/v{version}/Department/GetDepartmentById",
     "HttpMethod": "GET",
@@ -666,7 +666,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "API.Controllers.DepartmentController",
+    "ContainingType": "API.Controllers.Payroll.DepartmentController",
     "Method": "UpdateDepartment",
     "RelativePath": "api/v{version}/Department/UpdateDepartment",
     "HttpMethod": "PUT",
@@ -1116,6 +1116,27 @@
       {
         "Name": "Teacher",
         "Type": "API.Views.Payroll.TeacherUpdateModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.TeacherController",
+    "Method": "UploadPicture",
+    "RelativePath": "api/v{version}/Teacher/UploadPicture",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "API.Controllers.ImageUploadRequest",
         "IsRequired": true
       },
       {
