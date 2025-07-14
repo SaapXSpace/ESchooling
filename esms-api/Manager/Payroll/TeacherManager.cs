@@ -225,12 +225,7 @@ namespace API.Manager.Payroll
                 {
                     result.UpdatedBy = parsedUserId;
                 }
-                else
-                {
-                    // Handle case where UserId is not a valid GUID (e.g., log error, assign default)
-                    // For now, it will use the default value of Guid? UpdatedBy if it's nullable
-                    // or throw an error if it's non-nullable and not set.
-                }
+               
                 result.UpdatedAt = DateTime.Now;
                 result.Action = Enums.Operations.E.ToString();
 
@@ -278,10 +273,7 @@ namespace API.Manager.Payroll
                 {
                     result.DeletedBy = parsedUserId;
                 }
-                else
-                {
-                    // Handle case where UserId is not a valid GUID
-                }
+               
                 result.Action = Enums.Operations.D.ToString();
                 result.DeletedAt = DateTime.Now;
 

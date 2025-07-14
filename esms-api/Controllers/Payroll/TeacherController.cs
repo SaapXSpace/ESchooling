@@ -142,7 +142,6 @@ public class TeacherController : ControllerBase
         }
 
         // Validate RegNo format if necessary (e.g., must be numeric)
-        // Example: if (!int.TryParse(request.RegNo, out _)) { return BadRequest("Invalid Registration Number format."); }
 
         try
         {
@@ -163,8 +162,7 @@ public class TeacherController : ControllerBase
             string filePath = Path.Combine(uploadsFolder, fileName);
 
             // Basic check for JPG format (by checking first few bytes - magic number)
-            // This is a more robust check than just file extension
-            // JPEG magic number starts with FF D8 FF
+      
             if (imageBytes.Length < 3 || !(imageBytes[0] == 0xFF && imageBytes[1] == 0xD8 && imageBytes[2] == 0xFF))
             {
                 // If not a JPG, return an error. You could also try to convert it here
@@ -175,7 +173,7 @@ public class TeacherController : ControllerBase
             await System.IO.File.WriteAllBytesAsync(filePath, imageBytes);
 
             // Construct the URL that the frontend will use to access the image
-            string url = $"/img/images/{fileName}"; // FIXED: Updated URL path
+            string url = $"/img/images/{fileName}"; 
             return Ok(new { url });
         }
         catch (FormatException)

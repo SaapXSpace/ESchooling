@@ -1,5 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations; // Ensure this is included
+using System.ComponentModel.DataAnnotations;
 
 namespace API.Views.Payroll
 {
@@ -10,30 +10,30 @@ namespace API.Views.Payroll
         public string FullName { get; set; }
 
         [StringLength(20)]
-        public string? Code { get; set; } // Nullable, as it's often auto-generated or optional
+        public string? Code { get; set; } 
 
-        [Required] // Assuming Email is always required
+        [Required] 
         [StringLength(100)]
-        [EmailAddress] // Added for basic email format validation
+        [EmailAddress]
         public string Email { get; set; }
 
-        [Required] // Assuming Phone is always required
+        [Required] 
         [StringLength(20)]
         public string Phone { get; set; }
 
-        [Required] // Assuming CNIC is always required
+        [Required] 
         [StringLength(20)]
         public string Cnic { get; set; }
 
-        [Required] // Assuming Gender is always required
+        [Required] 
         [StringLength(10)]
         public string Gender { get; set; }
 
-        public DateTime? DateOfBirth { get; set; } // Changed to nullable DateTime
-        public DateTime? JoiningDate { get; set; } // Changed to nullable DateTime
+        public DateTime? DateOfBirth { get; set; } 
+        public DateTime? JoiningDate { get; set; } 
         public DateTime? ExitDate { get; set; }
 
-        public bool Active { get; set; } // FIXED: Changed from int to bool
+        public bool Active { get; set; } 
 
         [StringLength(20)]
         public string? EmploymentStatus { get; set; }
@@ -41,10 +41,10 @@ namespace API.Views.Payroll
         [StringLength(100)]
         public string? ExitReason { get; set; }
 
-        public string? Picture { get; set; } // Nullable string for picture URL
+        public string? Picture { get; set; } 
 
-        [StringLength(50)] // Added a length constraint
-        public string? RegistrationNumber { get; set; } // Added for the regNo used in picture naming
+        [StringLength(50)] 
+        public string? RegistrationNumber { get; set; } 
     }
 
     public class TeacherViewModel : TeacherBaseModel
@@ -68,13 +68,13 @@ namespace API.Views.Payroll
 
     public class TeacherUpdateModel : TeacherBaseModel
     {
-        [Required] // TeacherId is required for updates
+        [Required] 
         public Guid TeacherId { get; set; }
     }
 
     public class TeacherDeleteModel : TeacherBaseModel
     {
-        [Required] // TeacherId is required for deletes
+        [Required] 
         public Guid TeacherId { get; set; }
     }
 }

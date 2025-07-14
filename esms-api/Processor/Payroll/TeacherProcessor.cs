@@ -43,8 +43,7 @@ namespace API.Processor.Payroll
                                       Gender = ViewTable.Gender,
                                       Active = ViewTable.Active,
                                       EmploymentStatus = ViewTable.EmploymentStatus,
-                                      Picture = ViewTable.Picture // ADDED: Include Picture in ViewModel
-                                      // Add other properties if needed for the view model
+                                      Picture = ViewTable.Picture 
                                   }).ToList();
                     response.data = result;
                 }
@@ -70,7 +69,7 @@ namespace API.Processor.Payroll
                         {
                             TeacherId = _Table.TeacherId,
                             FullName = _Table.FullName,
-                            Code = _Table.Code, // Ensure Code is mapped for view by ID
+                            Code = _Table.Code, 
                             Email = _Table.Email,
                             Phone = _Table.Phone,
                             Cnic = _Table.Cnic,
@@ -80,7 +79,7 @@ namespace API.Processor.Payroll
                             EmploymentStatus = _Table.EmploymentStatus,
                             ExitDate = _Table.ExitDate,
                             ExitReason = _Table.ExitReason,
-                            Picture = _Table.Picture, // ADDED: Include Picture in ViewModel
+                            Picture = _Table.Picture, 
                             Active = _Table.Active
                         };
                         response.data = _ViewModel;
@@ -107,15 +106,13 @@ namespace API.Processor.Payroll
 
             if (_manager is TeacherManager teacherManager)
             {
-                // --- Start: Improved Code Generation Logic ---
                 var lastTeacherWithCode = await _context.Teachers
                     .Where(t => t.Code != null && t.Code.StartsWith("TEA-") && t.Action != Enums.Operations.D.ToString())
-                    .ToListAsync(); // Fetch all relevant codes to sort in memory if needed
+                    .ToListAsync(); 
 
                 int lastNumericCode = 0;
                 if (lastTeacherWithCode.Any())
                 {
-                    // Extract numeric parts and find the maximum
                     lastNumericCode = lastTeacherWithCode
                         .Select(t => {
                             string codePart = t.Code.Replace("TEA-", "");
@@ -156,7 +153,6 @@ namespace API.Processor.Payroll
             if (_manager is TeacherManager teacherManager) // Safely cast to TeacherManager
             {
                 // Pass the TeacherUpdateModel directly to the manager.
-                // The manager will handle retrieving the existing entity and updating its properties.
                 return await teacherManager.UpdateAsync(TeacherUpdateModel, _User);
             }
             else
