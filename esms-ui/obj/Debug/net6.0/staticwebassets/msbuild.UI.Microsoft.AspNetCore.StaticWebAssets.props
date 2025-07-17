@@ -336,8 +336,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n7i9xf9y0m</Fingerprint>
-      <Integrity>czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=</Integrity>
+      <Fingerprint>zxj9brzynh</Fingerprint>
+      <Integrity>yUthOvbRrwa65qhGzxok1iFor+TF65sm7uTmDZPmXOw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppJS\Payroll\Form\Teacher.js'))</OriginalItemSpec>

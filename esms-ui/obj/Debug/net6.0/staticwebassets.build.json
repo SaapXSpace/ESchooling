@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hhYw5Eztt71Pp1a6Dq3fpLvj6R2P+jYjc25/DevcoDc=",
+  "Hash": "nwkzYbr6JgEi+rh+skWAs28/4GkBc9q+aaWJ1qtvuBs=",
   "Source": "UI",
   "BasePath": "_content/UI",
   "Mode": "Default",
@@ -451,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n7i9xf9y0m",
-      "Integrity": "czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=",
+      "Fingerprint": "zxj9brzynh",
+      "Integrity": "yUthOvbRrwa65qhGzxok1iFor+TF65sm7uTmDZPmXOw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AppJS\\Payroll\\Form\\Teacher.js"
@@ -6986,7 +6986,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12197"
+          "Value": "13462"
         },
         {
           "Name": "Content-Type",
@@ -6994,11 +6994,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=\""
+          "Value": "\"yUthOvbRrwa65qhGzxok1iFor+TF65sm7uTmDZPmXOw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 13:53:01 GMT"
+          "Value": "Thu, 17 Jul 2025 12:10:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7008,12 +7008,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY="
+          "Value": "sha256-yUthOvbRrwa65qhGzxok1iFor+TF65sm7uTmDZPmXOw="
         }
       ]
     },
     {
-      "Route": "AppJS/Payroll/Form/Teacher.n7i9xf9y0m.js",
+      "Route": "AppJS/Payroll/Form/Teacher.zxj9brzynh.js",
       "AssetFile": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7023,7 +7023,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12197"
+          "Value": "13462"
         },
         {
           "Name": "Content-Type",
@@ -7031,11 +7031,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY=\""
+          "Value": "\"yUthOvbRrwa65qhGzxok1iFor+TF65sm7uTmDZPmXOw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 13:53:01 GMT"
+          "Value": "Thu, 17 Jul 2025 12:10:10 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7045,7 +7045,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n7i9xf9y0m"
+          "Value": "zxj9brzynh"
         },
         {
           "Name": "label",
@@ -7053,7 +7053,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-czE48nNRXC4csRY5Fksk8Fr+IGXEP+aO74xHIq6vzCY="
+          "Value": "sha256-yUthOvbRrwa65qhGzxok1iFor+TF65sm7uTmDZPmXOw="
         }
       ]
     },
@@ -26760,7 +26760,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
+          "Value": "Thu, 17 Jul 2025 11:56:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26805,7 +26805,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
+          "Value": "Thu, 17 Jul 2025 11:56:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26850,7 +26850,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
+          "Value": "Thu, 17 Jul 2025 11:56:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26887,7 +26887,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Jul 2025 13:53:54 GMT"
+          "Value": "Thu, 17 Jul 2025 11:56:03 GMT"
         },
         {
           "Name": "Cache-Control",

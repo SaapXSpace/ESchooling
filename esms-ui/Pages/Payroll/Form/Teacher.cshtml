@@ -79,10 +79,10 @@
                             <div class="col-md-9 offset-md-1">
                                 <div class="did-floating-label-content">
                                     <input class="did-floating-input" id="txt_code" type="hidden" readonly>
-                                    <label class="did-floating-label">Code</label>
+                                    @* <label class="did-floating-label">Code</label> *@
                                 </div>
                                 <div class="did-floating-label-content mt-3">
-                                    <input class="did-floating-input" id="txt_registration_number" type="text" placeholder="e.g., 625">
+                                    <input class="did-floating-input" id="txt_registration_number" type="text" required placeholder="e.g., 625">
                                     <label class="did-floating-label">Registration Number (for picture)</label>
                                 </div>
                             </div>
@@ -96,44 +96,44 @@
                         </div>
 
                         <div class="row form-group m-2">
-                            <div class="col-lg-12 did-floating-label-content">
+                            <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_fullname" type="text">
-                                <label class="did-floating-label">Full Name</label>
+                                <label class="did-floating-label" >Full Name <span style="color: red">*</span> </label>
                             </div>
-                            <div class="col-lg-12 did-floating-label-content">
+                            <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_email" type="text">
-                                <label class="did-floating-label">Email</label>
+                                <label class="did-floating-label">Email<span style="color: red">*</span></label>
                             </div>
-                            <div class="col-lg-12 did-floating-label-content">
+                            <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_phone" type="text">
-                                <label class="did-floating-label">Phone</label>
+                                <label class="did-floating-label">Phone<span style="color: red">*</span></label>
                             </div>
 
                             <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_cnic" type="text" />
-                                <label class="did-floating-label">CNIC</label>
+                                <label class="did-floating-label">CNIC<span style="color: red">*</span></label>
                             </div>
                             <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_gender" type="text" />
-                                <label class="did-floating-label">Gender</label>
+                                <label class="did-floating-label">Gender<span style="color: red">*</span></label>
                             </div>
                             <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_dob" type="date" />
-                                <label class="did-floating-label">Date of Birth</label>
+                                <label class="did-floating-label">Date of Birth<span style="color: red">*</span></label>
                             </div>
                             <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_joining" type="date" />
-                                <label class="did-floating-label">Joining Date</label>
+                                <label class="did-floating-label">Joining Date<span style="color: red">*</span></label>
                             </div>
                             <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_empstatus" type="text" />
-                                <label class="did-floating-label">Employment Status</label>
+                                <label class="did-floating-label">Employment Status<span style="color: red">*</span></label>
                             </div>
                             <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_exitdate" type="date" />
-                                <label class="did-floating-label">Exit Date</label>
+                                <label class="did-floating-label">Exit Date<span style="color: red">*</span>    </label>
                             </div>
-                            <div class="col-lg-12 did-floating-label-content">
+                            <div class="col-lg-6 did-floating-label-content">
                                 <input class="did-floating-input" id="txt_exitreason" type="text" />
                                 <label class="did-floating-label">Exit Reason</label>
                             </div>
@@ -146,11 +146,11 @@
                             </div>
                         </div>
                         <br>
-                        <div class="row form-group m-2">
-                            <div class="col-lg-12 d-flex justify-content-end gap-2">
-                                <button type="button" class="btn" data-dismiss="modal" style="background-color: #2c497d; color: white;">Close</button>
-                                <input id="btn_sav" type="button" value="Save" class="btn" style="background-color: #7566cc; color: white;" />
-                                <input id="btn_upd" type="button" value="Update" class="btn btn-warning" style="background-color: #7566cc; color: white;" />
+                        <div class="row form-group m-2 gap-3">
+                            <div class="col-lg-12 d-flex justify-content-end ">
+                                <button type="button" class="btn mr-1" data-dismiss="modal" style="background-color: #2c497d; color: white;">Close</button>
+                                <input id="btn_sav" type="button" value="Save" class="btn " style="background-color: #7566cc; color: white;" />
+                                <input id="btn_upd" type="button" value="Update" class="btn " style="background-color: #7566cc; color: white;" />
                             </div>
                         </div>
                     </fieldset>

@@ -59,49 +59,92 @@ function petchdata(res) {
     btn_save.hide(); // Hide save button
 }
 
-function ckvalidation() {
-    let ck = 0, _Error = '', _cre = '', id = $('#txt_id').val() || '00000000-0000-0000-0000-000000000000';
 
-    if ($('#txt_fullname').val().trim() === '') {
-        ck = 1; _Error = 'Full Name is required'; $('#txt_fullname').focus();
-    } else if ($('#txt_email').val().trim() === '') {
-        ck = 1; _Error = 'Email is required'; $('#txt_email').focus();
-    } else if ($('#txt_phone').val().trim() === '') {
-        ck = 1; _Error = 'Phone is required'; $('#txt_phone').focus();
-    } else if ($('#txt_cnic').val().trim() === '') {
-        ck = 1; _Error = 'CNIC is required'; $('#txt_cnic').focus();
-    } else if ($('#txt_gender').val().trim() === '') {
-        ck = 1; _Error = 'Gender is required'; $('#txt_gender').focus();
-    } else if ($('#txt_dob').val().trim() === '') {
-        ck = 1; _Error = 'Date of Birth is required'; $('#txt_dob').focus();
-    } else if ($('#txt_joining').val().trim() === '') {
-        ck = 1; _Error = 'Joining Date is required'; $('#txt_joining').focus();
+function ckvalidation() {
+    let ck = 0, _Error = '', id = $('#txt_id').val() || '00000000-0000-0000-0000-000000000000';
+
+    // Utility function to check and set error
+    function validateField(selector, fieldName) {
+        if ($(selector).val().trim() === '') {
+            ck = 1;
+            _Error = `${fieldName} is required`;
+            $(selector).focus();
+            Swal.fire({ title: _Error, icon: 'error' });
+            return false;
+        }
+        return true;
     }
 
-    if (ck === 1) {
-        Swal.fire({ title: _Error, icon: 'error' });
+    // Required fields
+    if (!validateField('#txt_fullname', 'Full Name')) return { ckval: 1 };
+    if (!validateField('#txt_email', 'Email')) return { ckval: 1 };
+    if (!validateField('#txt_phone', 'Phone')) return { ckval: 1 };
+    if (!validateField('#txt_cnic', 'CNIC')) return { ckval: 1 };
+    if (!validateField('#txt_gender', 'Gender')) return { ckval: 1 };
+    if (!validateField('#txt_dob', 'Date of Birth')) return { ckval: 1 };
+    if (!validateField('#txt_joining', 'Joining Date')) return { ckval: 1 };
+
+    // Email format
+    const emailVal = $('#txt_email').val().trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailVal)) {
+        Swal.fire({ title: 'Invalid Email Format', icon: 'error' });
+        $('#txt_email').focus();
         return { ckval: 1 };
     }
 
-    _cre = JSON.stringify({
+    // Phone format
+    const phoneVal = $('#txt_phone').val().trim();
+    if (!/^03[0-9]{9}$/.test(phoneVal)) {
+        Swal.fire({ title: 'Phone must be 11 digits starting with 03', icon: 'error' });
+        $('#txt_phone').focus();
+        return { ckval: 1 };
+    }
+
+    // CNIC format
+    const cnicVal = $('#txt_cnic').val().trim();
+    if (!/^\d{13}$/.test(cnicVal)) {
+        Swal.fire({ title: 'CNIC must be a 13-digit number', icon: 'error' });
+        $('#txt_cnic').focus();
+        return { ckval: 1 };
+    }
+
+    // Exit date must be after or same as joining date
+    if ($('#txt_exitdate').val().trim() !== '' && $('#txt_joining').val().trim() !== '') {
+        const exitDate = new Date($('#txt_exitdate').val());
+        const joiningDate = new Date($('#txt_joining').val());
+        if (exitDate < joiningDate) {
+            Swal.fire({ title: 'Exit date cannot be before joining date', icon: 'error' });
+            $('#txt_exitdate').focus();
+            return { ckval: 1 };
+        }
+    }
+
+    // If all validations passed, create payload
+    const _cre = JSON.stringify({
         teacherId: id,
         code: $('#txt_code').val(),
         fullName: $('#txt_fullname').val(),
-        email: $('#txt_email').val(),
-        phone: $('#txt_phone').val(),
-        cnic: $('#txt_cnic').val(),
+        email: emailVal,
+        phone: phoneVal,
+        cnic: cnicVal,
         gender: $('#txt_gender').val(),
-        dateOfBirth: $('#txt_dob').val() || null,
-        joiningDate: $('#txt_joining').val() || null,
+        dateOfBirth: $('#txt_dob').val(),
+        joiningDate: $('#txt_joining').val(),
         employmentStatus: $('#txt_empstatus').val(),
-        exitDate: $('#txt_exitdate').val() || null,
+        exitDate: $('#txt_exitdate').val() === '' ? null : $('#txt_exitdate').val(),
         exitReason: $('#txt_exitreason').val(),
         picture: $('#txt_picture_url').val(),
-        active: $('#ck_act').prop("checked") // Sends true/false directly
+        active: $('#ck_act').prop("checked")
     });
 
     return { ckval: 0, creteria: _cre };
 }
+
+
+
+
+
 
 function Onload() {
     var tbl_row_cnt = 1;
@@ -202,19 +245,20 @@ $('table').on('click', '.btn-delete', function (e) {
     e.preventDefault();
     const data = $('#data_table').DataTable().row($(this).closest("tr")).data();
     console.log("Delete button clicked, row data:", data);
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-        if (result.isConfirmed) {
+    //Swal.fire({
+    //    title: 'Are you sure?',
+    //    text: "You won't be able to revert this!",
+    //    icon: 'warning',
+    //    showCancelButton: true,
+    //    confirmButtonColor: '#3085d6',
+
+    //    cancelButtonColor: '#d33',
+    //    confirmButtonText: 'Yes, delete it!'
+    //}).then((result) => {
+    //    if (result.isConfirmed) {
             DELETE(end_point + "/DeleteTeacher?Id=" + data.teacherId, data.teacherId, data.fullName, discon);
-        }
-    });
+       // }
+   // });
 });
 
 window.showPreview = function (event) {

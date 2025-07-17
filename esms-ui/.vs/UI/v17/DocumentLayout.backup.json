@@ -51,8 +51,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAB5OA0AAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-04T13:35:12.313Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -65,8 +64,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-06T13:39:00.928Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -78,8 +76,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwBUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T06:57:10.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-14T06:57:10.219Z"
             },
             {
               "$type": "Document",
@@ -91,8 +88,7 @@
               "RelativeToolTip": "wwwroot\\AppJS\\Service\\ApiService.js",
               "ViewState": "AgIAAIIAAAAAAAAAAAAAAIwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-11T09:44:26.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T09:44:26.197Z"
             },
             {
               "$type": "Document",
@@ -102,7 +98,7 @@
               "RelativeDocumentMoniker": "wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
               "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
               "RelativeToolTip": "wwwroot\\AppJS\\Payroll\\Form\\Teacher.js",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAowFgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAABAMzMzMzMLwI0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-07-08T09:01:27.251Z",
               "EditorCaption": ""
@@ -115,7 +111,7 @@
               "RelativeDocumentMoniker": "Pages\\Payroll\\Form\\Teacher.cshtml",
               "ToolTip": "D:\\Saapx\\ESMS\\ESchooling\\esms-ui\\Pages\\Payroll\\Form\\Teacher.cshtml",
               "RelativeToolTip": "Pages\\Payroll\\Form\\Teacher.cshtml",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAYwFQAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAaGZmZmYkwJYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-07-08T07:04:14.074Z",
               "EditorCaption": ""
