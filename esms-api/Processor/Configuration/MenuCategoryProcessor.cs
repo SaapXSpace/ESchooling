@@ -11,10 +11,10 @@ namespace API.Processor.Payroll.Setup
     public class MenuCategoryProcessor : IProcessor<MenuCategoryBaseModel>
     {
          private AppDBContext _context;
-         private IManager? _manager;
-         public  MenuCategoryProcessor (AppDBContext context) {
+         private IManager _manager;
+         public  MenuCategoryProcessor (AppDBContext context, IManager manager) {
             _context = context;
-            _manager = Builder.MakeManagerClass(Enums.ModuleClassName.MenuCategory, _context); 
+            _manager = manager; 
         }
 
         public async Task<ApiResponse> ProcessGet(Guid MenuId, ClaimsPrincipal _User)

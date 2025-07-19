@@ -11,10 +11,10 @@ namespace API.Processor.Payroll.Setup
     public class BranchProcessor : IProcessor<BranchBaseModel>
     {
          private AppDBContext _context;
-         private IManager? _manager;
-         public  BranchProcessor (AppDBContext context) {
+         private IManager _manager;
+         public  BranchProcessor (AppDBContext context, IManager manager) {
             _context = context;
-            _manager = Builder.MakeManagerClass(Enums.ModuleClassName.Branch, _context); 
+            _manager = manager; 
         }
 
         public async Task<ApiResponse> ProcessGet(Guid MenuId, ClaimsPrincipal _User)

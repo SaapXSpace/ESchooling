@@ -29,6 +29,7 @@ namespace API.Shared
 
             Department,
             Teacher,
+            Student,
             
             // ACCOUNTS
             Asset,

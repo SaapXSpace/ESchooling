@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+
 using API.Models;
 using API.Model.Payroll;
 
@@ -40,13 +41,14 @@ namespace API.Layers.ContextLayer
 
             public DbSet<Department> Departments { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+            public DbSet<Student> Students { get; set; }
 
         #endregion
 
         #region ACCOUNTS
 
-            
-            
+
+
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

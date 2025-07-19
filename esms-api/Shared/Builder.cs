@@ -1,5 +1,6 @@
-using API.Layers.ContextLayer;
+﻿using API.Layers.ContextLayer;
 using API.Manager;
+using API.Manager.Payroll;
 using API.Manager.Payroll.Setup;
 using API.Repository;
 
@@ -7,7 +8,8 @@ namespace API.Shared
 {
     public static class Builder
     {
-        public static IManager? MakeManagerClass(Enums.ModuleClassName ClassName, AppDBContext _context){
+        public static IManager? MakeManagerClass(Enums.ModuleClassName ClassName, AppDBContext _context , IWebHostEnvironment _env)
+        {
             switch (ClassName)
             {
                 case Enums.ModuleClassName.Company:{
@@ -28,6 +30,11 @@ namespace API.Shared
                 case Enums.ModuleClassName.Department:{
                     return new DepartmentManager(_context);
                 }
+                case Enums.ModuleClassName.Student:
+                    {
+                        return new StudentManager(_context, _env); 
+                    }
+
                 case Enums.ModuleClassName.UserRole:{
                     return new UserRoleManager(_context);
                 }
